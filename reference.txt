@@ -1,0 +1,5 @@
+tileTypes:
+1: + shape
+2: | shape
+3: ∟ shape
+4: T shape
