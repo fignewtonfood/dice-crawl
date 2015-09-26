@@ -1,5 +1,8 @@
 <table>
     <tr>
-        <td ng-repeat="item in tiles"><img ng-src="{{ item.image }}"></td>
+        <td ng-repeat="item in tiles | limitTo: 5"><img ng-src="{{ item.image }}"></td>
+    </tr>
+    <tr>
+        <td ng-repeat="item in tiles | limitTo: 5: 5"><img ng-src="{{ item.image }}"></td>
     </tr>
 </table>
