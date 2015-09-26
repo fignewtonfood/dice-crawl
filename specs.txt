@@ -1,0 +1,3 @@
+1) Display one specific tile upon starting page
+Input: none
+Output: tile image based on Tile object { tileType: 1, tileDiceNumber: 1, tileDiceOne: 6, tileImage: "tileImageOne.jpg"}
