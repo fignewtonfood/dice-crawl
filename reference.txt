@@ -3,3 +3,40 @@ tileTypes:
 2: | shape
 3: ∟ shape
 4: T shape
+
+powers:
+Attack:         roll up to two dice from supply
+                pick largest die value (this die)
+                replace enemy die of lower value with (this die)
+                    if there are no dice of lower value, no replacement occurs
+                    if there is only one die remaining in supply, then only one die is rolled
+Garrison:       choose any rolled die (this die)
+                place (this die) on any empty space (ignore placement requirements)
+                change value of (this die) to die space value
+Hoarder:        (passive) [changes score]
+                    all hoard spaces are worth +1 at end of game
+                        multiple instances stack
+Onslaught:      choose any enemy die
+                return die to enemy supply
+Reinforcements: choose dice to reroll
+                reroll dice
+Reveal:         choose face-down tile
+                flip tile
+                orient tile
+Roll +1:        (passive) [changes game rules]
+                    maximum dice roll value increases by one
+                        multiple instances stack
+Rotate:         choose face-up non-conquered tile
+                orient tile
+Scout:          move player to adjacent, revealed tile
+                    can only move if current tile is conquered
+Shapechange:    choose rolled die (this die)
+                choose enemy die on board
+                return enemy die to supply
+                place rolled die in enemy die space
+                change value of (this die) to die space value
+Swap:           choose two adjacent, unconquered tiles
+                switch locations of two tiles
+                    orientation remains constant
+Withdraw:       choose one friendly unit
+                return chosen unit to supply
