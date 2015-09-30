@@ -1,6 +1,6 @@
 # _Dice Crawl_
 ## _Users can play a game of dice crawl: search the dungeon, get treasure, defeat the dragon, 9/26/2015_
-### By Tim White
+### By Tim White, Mike Chastain
 ## Description
 _Users will see a randomly created dungeon and be randomly assigned a race and class. Using their bank of dice, they will be able to defeat monsters, unlock powers, and gain treasures._
 
@@ -9,9 +9,16 @@ _Users will see a randomly created dungeon and be randomly assigned a race and c
 Clone and open index.html in your browser.
 
 OSX: In your project folder in the terminal, enter
+
+python 2.x
 ```
 $ python -m SimpleHTTPServer
 ```
+python 3.x
+```
+python -m http.server
+```
+
 and then navigate to localhost:8000
 
 _Windows, you can download [Mongoose](https://code.google.com/p/mongoose/), copy it to your project folder, and double-click it to launch a server and open your page in the browser._  
@@ -20,7 +27,7 @@ _Windows, you can download [Mongoose](https://code.google.com/p/mongoose/), copy
 _This project makes use of: AngularJS and Angular-ui / [ui-router](https://github.com/angular-ui/ui-router)_
 
 ### Legal
-Copyright (c) 2015 Tim White
+Copyright (c) 2015 Tim White, Mike Chastain
 
 This software is licensed under the MIT license.
 
