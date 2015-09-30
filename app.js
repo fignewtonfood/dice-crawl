@@ -11,4 +11,10 @@ diceCrawl.config(function($stateProvider, $urlRouterProvider){
         templateUrl: "partials/board.html",
         controller: "TilesCtrl"
     });
+
+    // $stateProvider.state('board', {
+    //     url: "/playersTest",
+    //     templateUrl: "partials/playersTest.html",
+    //     controller: "PlayersCtrl"
+    // });
 });
