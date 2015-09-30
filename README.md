@@ -1,6 +1,6 @@
 # _Dice Crawl_
 ## _Users can play a game of dice crawl: search the dungeon, get treasure, defeat the dragon, 9/26/2015_
-### By Tim White, Mike Chastain
+### By Tim White, Mike Chastain, Charles Moss
 ## Description
 _Users will see a randomly created dungeon and be randomly assigned a race and class. Using their bank of dice, they will be able to defeat monsters, unlock powers, and gain treasures._
 
@@ -27,7 +27,7 @@ _Windows, you can download [Mongoose](https://code.google.com/p/mongoose/), copy
 _This project makes use of: AngularJS and Angular-ui / [ui-router](https://github.com/angular-ui/ui-router)_
 
 ### Legal
-Copyright (c) 2015 Tim White, Mike Chastain
+Copyright (c) 2015 Tim White, Mike Chastain, Charles Moss
 
 This software is licensed under the MIT license.
 
