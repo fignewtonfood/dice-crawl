@@ -3,13 +3,16 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
 
         factory.players = [];
 
-       factory.newGame = function() {
-       factory.games.push({ players: [], board: [] });
+        factory.newGame = function() {
+        factory.games.push({ players: [], board: [] });
 
    };
 
    return factory;
 });
 
-
-// board is sub array of 24 tiles with the dragon
+//
+// notes:
+//
+// board is an array of 24 tiles (with the dragon) = 25 tiles
+// the dragon will be inserted in the board array at index 12
