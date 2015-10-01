@@ -7,11 +7,8 @@ $scope.players = PlayersFactory.players;
 
 
 
-$scope.updateDiceCount(){
-  //
-  //$scope.diceCount +=
-}
-
-
-
-})
+// $scope.updateDiceCount(){
+//   //
+//   //$scope.diceCount +=
+// }
+});
