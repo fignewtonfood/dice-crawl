@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" ng-app="diceCrawl">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <title>Dice Crawl</title>
@@ -18,7 +17,7 @@
 <body>
   <div class="window">
     <div class="players">
-      <div class="player">
+      <div class="player" >
 
       </div>
       <div class="player">
@@ -31,91 +30,36 @@
 
       </div>
     </div>
-    <div class="board">
-
+    <div class="board" ng-controller="TilesCtrl">
       <div class="row">
-        <div class="tile">
-
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0">
+          <img class="tile" src="img/img10.jpg" alt="" />
         </div>
-        <div class="tile">
-
+      </div>
+      <div class="row">
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5">
+          <img class="tile" src="img/img10.jpg" alt="" />
         </div>
-        <div class="tile">
+      </div>
+      <div class="row">
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 2: 10">
           <img class="tile" src="img/img10.jpg" alt="" />
         </div>
         <div class="tile">
 
         </div>
-        <div class="tile">
-
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 2: 12">
+          <img class="tile" src="img/img10.jpg" alt="" />
         </div>
       </div>
       <div class="row">
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 14">
+          <img class="tile" src="img/img10.jpg" alt="" />
         </div>
       </div>
       <div class="row">
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
-        </div>
-        <div class="tile">
-
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 19">
+          <img class="tile" src="img/img9.jpg" alt="" />
         </div>
       </div>
     </div>
