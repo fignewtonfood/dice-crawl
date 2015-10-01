@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScappleDocument Version="1.1" ID="7CD7E140-6B68-4AFC-BFB4-978CB6B23559">
+    <Notes>
+        <Note ID="0" FontSize="26.4275" Position="961.144459,55.0" Width="123.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Game Init</String>
+            <ConnectedNoteIDs>14, 20-21, 37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="1" FontSize="18.0025" Position="255.478342,274.638365" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>playersView</String>
+            <ConnectedNoteIDs>20</ConnectedNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="18.0025" Position="102.989365,257.556752" Width="145.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>playersController</String>
+            <ConnectedNoteIDs>9</ConnectedNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="18.0025" Position="1442.534261,764.96886" Width="102.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>gameBoard</String>
+            <ConnectedNoteIDs>20</ConnectedNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="18.0025" Position="1722.125168,487.195841" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>tile</String>
+            <ConnectedNoteIDs>12</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="24.67" Position="396.015142,441.676851" Width="170.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>playersFactory</String>
+            <ConnectedNoteIDs>2, 21, 30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="16.48" Position="1725.035324,509.590373" Width="114.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>TilesController</String>
+            <ConnectedNoteIDs>8, 14</ConnectedNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="25.5675" Position="1341.019176,396.718378" Width="147.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>TilesFactory</String>
+            <ConnectedNoteIDs>0, 12</ConnectedNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="19.975" Position="1010.968596,206.965716" Width="28.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>UI</String>
+            <ConnectedNoteIDs>0-1, 5</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="20.31" Position="818.270208,149.89061" Width="123.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>createPlayer</String>
+            <ConnectedNoteIDs>0, 9</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="15.6975" Position="479.905324,476.834522" Width="60.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>races []</String>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="831.082928,579.28943" Width="116.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>Game Loop
+</String>
+        </Note>
+        <Note ID="27" FontSize="12.0" Position="1049.446002,646.016217" Width="60.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>player.roll</String>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="1066.633331,665.568319" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>a number of dice 5 6 or 7 out of the players diceCount
+</String>
+            <ConnectedNoteIDs>35</ConnectedNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="697.58686,509.313783" Width="125.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>example player object
+</String>
+            <ConnectedNoteIDs>9</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="694.403752,551.332273" Width="62.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>name,
+color,
+diceCount,
+score,
+ abilities</String>
+        </Note>
+        <Note ID="35" FontSize="12.0" Position="789.419839,549.793844" Width="63.0" Shadow="Yes">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>diceCount</String>
+            <ConnectedNoteIDs>29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="31.62" Position="1575.615512,263.09142" Width="177.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>DiceFactory</String>
+            <ConnectedNoteIDs>0</ConnectedNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="15.6975" Position="482.911067,513.138766" Width="74.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>classes []</String>
+        </Note>
+        <Note ID="39" FontSize="15.6975" Position="482.911067,546.138766" Width="79.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+            <String>diceCount</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes>
+        <Shape ID="22" Sticky="Yes" Position="780.0,30.0" Width="671.0" Height="261.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="3" Sticky="Yes" Position="99.062889,255.169406" Width="262.0" Height="281.5625">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="4" Sticky="Yes" Position="1440.588949,743.421985" Width="331.0" Height="318.972656">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="7" Sticky="Yes" Position="1715.504074,481.793498" Width="142.613281" Height="104.441406">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="24" Sticky="Yes" Position="388.15923,429.939991" Width="283.0" Height="181.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="41" Sticky="Yes" Position="1342.859185,391.425303" Width="169.0" Height="100.143687" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="36" Sticky="Yes" Position="954.68978,536.124946" Width="326.0" Height="202.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="34" Sticky="Yes" Position="687.184517,494.665345" Width="156.0" Height="169.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+        <Shape ID="42" Sticky="Yes" Position="1565.0,247.0" Width="347.0" Height="178.0" Shadow="Yes">
+            <Appearance>
+                <Border Weight="1"></Border>
+            </Appearance>
+        </Shape>
+    </BackgroundShapes>
+    <Stacks>
+        <Stack>38-39</Stack>
+    </Stacks>
+    <AutoFit>0-2, 5, 8-9, 12, 14, 20-21, 25, 27, 30, 35, 37-39</AutoFit>
+    <NoteStyles>
+        <Style Name="Title Text" ID="DDEF6165-1209-4699-8B65-B00F24B60F82" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Red Text" ID="25A08DB1-DE3B-4A0A-A0E0-926461BD0458" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="CD67D8A0-1EA9-47AB-82AB-164CB36C13D5" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Yellow Bubble" ID="723EA550-7E4D-48DD-A923-9831037AD293" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="F86277FB-2AC6-495C-B189-947BE5E171F0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882327 0.80198</FillColor>
+        </Style>
+        <Style Name="Blue Bubble" ID="FE43E169-D13D-44BB-898C-DA6390CFA412" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="CB9BD15C-7C4F-4F47-AEF8-ABC83F61016A" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999737 0.986332 0.931298</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
