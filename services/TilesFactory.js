@@ -1,5 +1,6 @@
 diceCrawl.factory('TilesFactory', function TilesFactory($http){
     var factory = {};
+    factory.dragon = { "type":1 , "value":3 , "orientation":0 , "name":51 };
     factory.tiles = [
         { "type":4 , "value":0 , "treasure":1 , "ability":"" , "diceValues":[1] , "orientation":0 , "name":1 },
         { "type":1 , "value":1 , "treasure":0 , "ability":"" , "diceValues":[6] , "orientation":0 , "name":2 },
