@@ -1,8 +1,8 @@
 tileTypes:
 1: + shape
 2: | shape
-3: ∟ shape
-4: T shape
+3: T shape
+4: ∟ shape
 
 powers:
 Attack:         roll up to two dice from supply
