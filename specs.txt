@@ -1,3 +1,15 @@
-1) Display one specific tile upon starting page
-Input: none
-Output: tile image based on Tile object { tileType: 1, tileDiceNumber: 1, tileDiceOne: 6, tileImage: "tileImageOne.jpg"}
+Start Game
+
+1) Display one specific tile upon start
+Output: tile image based on Tile object
+
+2) Display full game board upon start
+Output: all 25 tiles display based on Board array
+
+3) Display player object on board
+Output: display color, opening score, opening die tally, starting class/race combo
+
+4) Display 4 player objects on board
+Output: display all player objects in separate divs
+
+5) 

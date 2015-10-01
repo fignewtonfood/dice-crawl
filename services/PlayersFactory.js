@@ -107,6 +107,7 @@ diceCrawl.factory('PlayersFactory', function PlayersFactory(RacesFactory){
     powerThree: { powerName: "Shapechange", requirement: 6, diceFive: 6, diceSix: 6 } }
   ];
 
+
   //player.abilities.race.powerOne.diceOne = 1
   //create the ability create players in a specific form
   function Player(playerColor,diceCount,score,abilities){
@@ -123,6 +124,7 @@ diceCrawl.factory('PlayersFactory', function PlayersFactory(RacesFactory){
     return selectedItem;
   }
 
+
   Player.prototype.setPlayerColor = function() {
     this.playerColor = randomSelectDelete(colors);
   }
@@ -137,7 +139,7 @@ diceCrawl.factory('PlayersFactory', function PlayersFactory(RacesFactory){
   var playerOne = new Player();
   playerOne.setPlayerColor();
   playerOne.setAbilities();
-  
+
   // testing for character creation
   console.log("Player One:");
   console.log("Player Color: " + playerOne.playerColor);

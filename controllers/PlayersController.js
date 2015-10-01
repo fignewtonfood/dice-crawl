@@ -1,4 +1,4 @@
-diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, PlayersFactory){
+diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, PlayersFactory, GamesFactory){
 
 
 
@@ -7,11 +7,8 @@ $scope.players = PlayersFactory.players;
 
 
 
-$scope.updateDiceCount(){
-  //
-  //$scope.diceCount +=
-}
-
-
-
-})
+// $scope.updateDiceCount(){
+//   //
+//   //$scope.diceCount +=
+// }
+});

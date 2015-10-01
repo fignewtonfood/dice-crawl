@@ -1,23 +1,126 @@
 <!doctype html>
 <html lang="en" ng-app="diceCrawl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dice Crawl</title>
-        <script src="lib/angular.js"></script>
-        <script src="lib/angular-ui-router.js"></script>
-        <script src="lib/chance.js"></script>
-        <script src="app.js"></script>
-        <script src="controllers/TilesController.js"></script>
-        <script src="services/TilesFactory.js"></script>
-        <script src="controllers/PlayersController.js"></script>
-        <script src="services/TilesFactory.js"></script>
-        <script src="services/PlayersFactory.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <div ui-view></div>
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Crawl</title>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/chance.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/TilesController.js"></script>
+    <script src="services/TilesFactory.js"></script>
+    <script src="controllers/PlayersController.js"></script>
+    <script src="services/TilesFactory.js"></script>
+    <script src="services/PlayersFactory.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="window">
+    <div class="players">
+      <div class="player">
+
+      </div>
+      <div class="player">
+
+      </div>
+      <div class="player">
+
+      </div>
+      <div class="player">
+
+      </div>
+    </div>
+    <div class="board">
+
+      <div class="row">
+        <div class="tile">
+
         </div>
-    </body>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+          <img class="tile" src="img/img10.jpg" alt="" />
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+        <div class="tile">
+
+        </div>
+      </div>
+    </div>
+    <div class="game">
+
+    </div>
+  </div>
+</body>
 </html>
