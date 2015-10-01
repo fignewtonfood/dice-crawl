@@ -1,25 +1,30 @@
-diceCrawl.factory('PlayersFactory', function PlayersFactory(){
-
+diceCrawl.factory('PlayersFactory', function PlayersFactory(RacesFactory){
+//main vars
   var factory = {};
   factory.players = [];
-  factory.maxPlayers = 4;
+  factory.maxPlayers = 2;
 
-  function Player(name,color,dicecount,score){
+//create the ability create players in a specific form
+function Player(name,color,diceCount,score){
     this.name = name;
     this.color = color;
-    this.diceCount = dicecount;
+    this.diceCount = diceCount;
     this.score = score;
   }
 
-  playerColors = ["red","yellow","green","blue"]
+  abilities
+
+var playerColors = ["red","yellow","green","blue"];
+
+
 
 function addPlayer(player){
 
     if (factory.players.length < factory.maxPlayers){
-      factory.players.push(player);
+      factory.players.push(players);
     }
     else{
-      return false
+      return false;
       }
 
   }
@@ -28,6 +33,7 @@ function addPlayer(player){
 factory.updateDiceCount(){
 //fill in here when method is required
 }
+
 
 return factory;
 

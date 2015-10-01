@@ -1,5 +1,14 @@
 diceCrawl.factory('ClassesFactory', function ClassesFactory(){
     var factory = {};
+    factory.classes[0].powerOne.diceOne = 1
+
+    { name: "Alchemist",
+        powerOne: { powerName: "Reveal", requirement: 1, diceOne: 1, diceTwo: 6 },
+        powerTwo: { powerName: "Attack", requirement: 2, diceThree: 2, diceFour: 5 },
+        powerThree: { powerName: "Reinforcements", requirement: 3, diceFive: 3, diceSix: 4 } }
+
+
+    
     factory.classes = [
 
             { className: "Alchemist",
