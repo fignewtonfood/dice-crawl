@@ -1,0 +1,18 @@
+<h1>Welcome to Dice Crawl!</h1>
+
+<!-- <form ng-submit="TilesFactory.addTile()" class="form-inline" role="form"> -->
+    <!-- <div class="form-group">
+        <input type="text" ng-model="TilesFactory.tileType" ng-value="1" class="form-control">
+        <input type="text" ng-model="TilesFactory.tileDiceNumber" ng-value="1" class="form-control">
+        <input type="text" ng-model="TilesFactory.tileDiceOne" ng-value="6" class="form-control">
+        <input type="text" ng-model="TilesFactory.tileImage" ng-value="img/img1.jpg" class="form-control">
+    </div> -->
+    <a ui-sref="board"><button type="submit" class="btn">Start Game</button></a>
+
+    <div ng-repeat="item in tiles">
+        <h3>Tiles:</h3> {{ "Name: " + item.name}}
+    </div>
+
+    
+
+<!-- </form> -->
