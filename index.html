@@ -1,18 +1,177 @@
 <!doctype html>
 <html lang="en" ng-app="diceCrawl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dice Crawl</title>
-        <script src="lib/angular.js"></script>
-        <script src="lib/angular-ui-router.js"></script>
-        <script src="app.js"></script>
-        <script src="controllers/TilesController.js"></script>
-        <script src="services/TilesFactory.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <div ui-view></div>
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Crawl</title>
+  <script src="lib/angular.js"></script>
+  <script src="lib/angular-ui-router.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/TilesController.js"></script>
+  <script src="services/TilesFactory.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">        <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div>
+    <div class="row">
+
+      <!-- player stats -->
+
+      <div class="col-xs-3">
+        <div class="row player">
+            <h4>Troll Archer <img src="img/dice.svg.png" alt="" /><span class="dice">: 25</span></h4>
+          <hr>
         </div>
-    </body>
+        <div class="row player">
+          <h4>Troll Archer</h4>
+          <hr>
+
+        </div>
+        <div class="row player">
+          <h4>Troll Archer</h4>
+          <hr>
+
+        </div>
+        <div class="row player">
+          <h4>Troll Archer</h4>
+          <hr>
+
+        </div>
+      </div>
+
+      <!-- game board -->
+
+      <div class="col-xs-6">
+        <div class="row board">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs1">
+
+          </div>
+        </div>
+        <div class="row board">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-1">
+
+          </div>
+        </div>
+        <div class="row board">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-1">
+
+          </div>
+        </div>
+        <div class="row board">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-1">
+
+          </div>
+        </div>
+        <div class="row board">
+          <div class="col-xs-1">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-2">
+
+          </div>
+          <div class="col-xs-1">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- turn walkthrough -->
+
+      <div class="col-xs-3">
+        <div class="row game-flow">
+
+        </div>
+        <div class="row game-flow">
+
+        </div>
+        <div class="row game-flow">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
