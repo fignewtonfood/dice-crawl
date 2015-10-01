@@ -1,4 +1,4 @@
-diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, PlayersFactory){
+diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, PlayersFactory, GamesFactory){
 
 
 
