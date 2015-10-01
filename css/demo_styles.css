@@ -1,0 +1,67 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    /*height: 100%;*/
+}
+body {
+    background: #000;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* they spin =================== */
+
+.wrapper {
+
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 50px auto;
+}
+/*.game__tile--up {
+    margin: 0 1em 1.5em 0;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #aab6c3;
+    border-radius: 1px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}*/
+.tile_image {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 0;
+    color: #f5f2f0;
+    transition: ease-out 5s;
+    z-index: 1;
+}
+
+.tile__image:hover {
+    margin: -1em .5em 1em -.5em;
+    border: 1px doted #f1f1f1;
+    border-radius: 1px;
+    background-color: #fff;
+    box-shadow: -8px -8px 25px -5px rgba(17,42,92,0.6);, 3px 3px 6px rgba(0, 0, 0, .73);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* clear fix ================ */
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
