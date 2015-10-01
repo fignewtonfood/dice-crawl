@@ -11,7 +11,7 @@ diceCrawl.factory('PlayersFactory', function PlayersFactory(){
     this.score = score;
   }
 
-  playerColors = ["red","yellow","green","blue"]
+  playerColors = ["red","yellow","green","blue"];
 
 function addPlayer(player){
 
@@ -19,15 +19,15 @@ function addPlayer(player){
       factory.players.push(player);
     }
     else{
-      return false
+      return false;
       }
 
   }
 
 
-factory.updateDiceCount(){
+//factory.updateDiceCount(){
 //fill in here when method is required
-}
+//}
 
 return factory;
 
