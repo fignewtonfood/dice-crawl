@@ -87,3 +87,7 @@ div {
 .row {
   display:flex;
 }
+
+.rotate{
+  transform: rotate(90deg);
+}
