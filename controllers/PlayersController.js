@@ -1,9 +1,8 @@
-diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, PlayersFactory){
+diceCrawl.controller('PlayersCtrl', function PlayerCtrl($scope, GamesFactory){
 
-$scope.maxPlayers = 2
-$scope.players = [];
-
-
+$scope.maxPlayers = GamesFactory.maxPlayers;
+$scope.players = GamesFactory.players;
+var colors = ["red","green","yellow","blue"];
 var classes = [
 
   { className: "Alchemist",
@@ -110,9 +109,10 @@ var races = [
 
 //player.abilities.race.powerOne.diceOne = 1
 //create the ability create players in a specific form
-function Player(playerColor,diceCount,score,abilities){
+function Player(playerColor, diceCount, rollCount, score, abilities){
   this.playerColor = String(playerColor);
   this.diceCount = Number(25);
+  this.rollCount = Number(5);
   this.score = Number(0);
   this.abilities = {playerRace:{},playerClass:{}};
 }
@@ -134,11 +134,28 @@ Player.prototype.setAbilities = function(){
   this.abilities.playerClass = randomSelectDelete(classes);
 }
 
+Player.prototype.updateRollCount = function(){
 
-var playerOne = new Player();
-playerOne.setPlayerColor();
-playerOne.setAbilities();
+}
 
+Player.prototype.changeScore = function(){
+
+}
+ //Functions to place in the gameFactory at somePoint
+ $scope.initPlayers = function (){
+       for (var i = 0; i < $scope.maxPlayers; ++i ) {
+         var player = new Player();
+         player.setPlayerColor();
+         player.setAbilities();
+         $scope.players.push(player);
+
+             console.log("Player: " + i + " is: ");
+             console.log("Player Color: " + player.playerColor);
+             console.log("Dice count: " + player.diceCount);
+             console.log("Player score: " + player.score);
+             console.log("Player race: " + player.abilities.playerRace.raceName);
+     }//end for
+   }//end init
 
 
 })
