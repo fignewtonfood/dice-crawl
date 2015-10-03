@@ -12,6 +12,7 @@
     <script src="controllers/PlayersController.js"></script>
     <script src="services/GamesFactory.js"></script>
     <script src="services/TilesFactory.js"></script>
+    <script src="directives/myDirectives.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -46,7 +47,7 @@
       </div>
       <div class="row">
         <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10">
-          <img class="tile" src="img/img{{ tile.name }}.jpg" alt="" />
+          <img class="tile" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
         </div>
       </div>
       <div class="row">
