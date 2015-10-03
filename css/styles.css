@@ -103,3 +103,23 @@ div {
 .rotate4{
   transform: rotate(0deg);
 }
+
+.player1{
+    border-radius: 50%;
+}
+
+.player2{
+    border-radius: 50%;
+}
+
+.player3{
+    border-radius: 50%;
+}
+
+.player4{
+    content:url(http://www.mathwarehouse.com/calculators/images/blue-square.png);
+    position: relative;
+    top: 25px;
+    left: 25px;
+    z-index: 5;
+}

@@ -12,3 +12,16 @@ diceCrawl.directive("rotateTile", function() {
         });
     }
 });
+
+diceCrawl.directive("placePlayer", function() {
+    return function (scope, element) {
+        element.bind("click", function() {
+            if (i<4) {
+                i++;
+            } else {
+                i=0;
+            }
+            element.toggleClass("player"+i);
+        });
+    }
+});
