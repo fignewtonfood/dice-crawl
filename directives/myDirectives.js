@@ -13,7 +13,7 @@ diceCrawl.directive("rotateTile", function() {
     }
 });
 
-diceCrawl.directive("placePlayer", function() {
+diceCrawl.directive("showPlayer", function() {
     return function (scope, element) {
         element.bind("click", function() {
             if (i<4) {
