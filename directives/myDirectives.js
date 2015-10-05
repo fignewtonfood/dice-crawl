@@ -10,9 +10,9 @@ diceCrawl.directive("rotateTile", function() {
             }
             element.toggleClass("rotate"+i);
         });
-    }
+    };
 });
-
+/*
 diceCrawl.directive("showPlayer", function() {
     return function (scope, element) {
         element.bind("click", function() {
@@ -23,7 +23,15 @@ diceCrawl.directive("showPlayer", function() {
             }
             element.toggleClass("player"+i);
         });
-    }
+    };
+});
+*/
+diceCrawl.directive("place", function() {
+    return function(scope, element) {
+        element.bind("click", function() {
+            element.append('<img src="/img/players/Blueplayer.png" class="blue"/>');
+        });
+    };
 });
 
 // diceCrawl.directive("rollDice", function(){

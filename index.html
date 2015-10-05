@@ -33,8 +33,8 @@
     </div>
     <div class="board" ng-controller="TilesCtrl">
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0">
-          <img class="tile" src="img/img10.jpg" alt="" />
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0" place >
+          <img class="tile__image" src="img/img10.jpg" alt="" />
           <img class="playerdefault-blue player-marker" src="img/players/BluePlayer.png">
           <img class="playerdefault-green player-marker" src="img/players/GreenPlayer.png">
           <img class="playerdefault-red player-marker" src="img/players/RedPlayer.png">
@@ -42,23 +42,23 @@
         </div>
       </div>
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5">
-          <img class="tile" src="img/img10.jpg" alt="" />
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5" place >
+          <img class="tile__image" src="img/img10.jpg" alt="" />
         </div>
       </div>
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10">
-          <img class="tile" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10" place>
+          <img class="tile__image" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
         </div>
       </div>
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15">
-          <img class="tile" src="img/img10.jpg" alt="" />
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15" place >
+          <img class="tile__image" src="img/img10.jpg" alt="" />
         </div>
       </div>
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20">
-          <img class="tile" src="img/img10.jpg" alt="" />
+        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20" place >
+          <img class="tile__image" src="img/img10.jpg" alt="" />
         </div>
       </div>
     </div>
