@@ -16,14 +16,17 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div ui-view>
+  <!-- <div ui-view>
 
-  </div>
+  </div> -->
   <div class="window">
     <div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
-        <div class="player {{player.playerColor}}" ng-repeat="player in players" roll-dice>
+        <div class="player {{player.playerColor}}" ng-repeat="player in players">
           {{ player.playerColor}} is a {{player.abilities.playerRace.raceName}}  {{player.abilities.playerClass.className}}
          Dice Count is:  {{player.diceCount}}
+<br>
+         <img class="tile" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
+         <img class="tile" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
 
          <div dice-area>
              <dice-to-roll rolled="rollDice()" ></dice-to-roll>

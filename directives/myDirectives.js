@@ -50,9 +50,10 @@ diceCrawl.directive ("diceToRoll",function(){
     return{
         restrict: "E",
         scope:{
-          rolled: "&"
+          roll: "&"
+
     },
-        template:'<button ng-click="rollDice()">Roll The Dice</button>'
+        template:'<button action="rollDice()">Roll The Dice</button>'
     }
 })
 

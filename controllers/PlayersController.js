@@ -134,17 +134,7 @@ Player.prototype.setAbilities = function(){
   this.abilities.playerClass = randomSelectDelete(classes);
 }
 
-Player.prototype.updateRollCount = function(){
 
-}
-
-Player.prototype.rollDice = function(){
-    diceVal = chance.d6();
-}
-
-Player.prototype.changeScore = function(){
-
-}
  //Functions to place in the gameFactory at somePoint
  $scope.initPlayers = function (){
        for (var i = 0; i < $scope.maxPlayers; ++i ) {
