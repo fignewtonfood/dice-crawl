@@ -133,19 +133,19 @@ function randomSelectDelete(selectedArray) {
 //for every number in the rollCount a dice object is created
 //each die is rolled (die.roll())
     //which will return a random number from 1 to 6
-    
 
-Player.pullDiceToRoll(){
-  if (this.diceCount < this.rollCount) {
-    this.rollCount = this.diceCount;
-  } else {
-    this.diceCount -= this.rollCount;
-  }
-  while (var i <= rollCount ){//five will
-    roll(rollCount);
-    i += 1;
-  }
-}
+
+// Player.pullDiceToRoll(){
+//   if (this.diceCount < this.rollCount) {
+//     this.rollCount = this.diceCount;
+//   } else {
+//     this.diceCount -= this.rollCount;
+//   }
+//   while (var i <= rollCount ){//five will
+//     roll(rollCount);
+//     i += 1;
+//   }
+// }
 
 Player.prototype.setPlayerColor = function() {
   this.playerColor = randomSelectDelete(colors);

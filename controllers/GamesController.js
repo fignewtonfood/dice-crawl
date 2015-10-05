@@ -1,4 +1,4 @@
-diceCrawl.controller('GamesCtrl', function GamesCtrl($scope, PlayersFactory, GamesFactory){
+diceCrawl.controller('GamesCtrl', function GamesCtrl($scope, GamesFactory){
 
     $scope.Games = GamesFactory.Games;
 

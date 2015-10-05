@@ -6,8 +6,13 @@ diceCrawl.directive("rotateTile", function() {
             if (i<4) {
                 i++;
             } else {
-                i=0;
+                i=1;
             }
+            element.removeClass("rotate0");
+            element.removeClass("rotate1");
+            element.removeClass("rotate2");
+            element.removeClass("rotate3");
+            element.removeClass("rotate4");
             element.toggleClass("rotate"+i);
         });
     };
