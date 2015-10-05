@@ -112,7 +112,7 @@ var races = [
 function Player(playerColor, diceCount, rollCount, score, abilities){
   this.playerColor = String(playerColor);
   this.diceCount = Number(25);
-  this.rollCount = Number(5);
+  this.rollCount = Number(0);
   this.score = Number(0);
   this.abilities = {playerRace:{},playerClass:{}};
 }
@@ -157,5 +157,6 @@ Player.prototype.changeScore = function(){
      }//end for
    }//end init
 
+$scope.
 
 })

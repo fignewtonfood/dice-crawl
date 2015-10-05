@@ -20,19 +20,11 @@
 
   </div>
   <div class="window">
-    <div class="players" ng-controller="PlayersCtrl">
-      <div class="player" >
-        <h4></h4>
-      </div>
-      <div class="player">
-
-      </div>
-      <div class="player">
-
-      </div>
-      <div class="player">
-
-      </div>
+    <div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
+        <div class="player {{player.playerColor}}" ng-repeat="player in players" >
+          {{ player.playerColor}}
+         Dice Count is:  {{player.diceCount}}
+        </div>
     </div>
     <div class="board" ng-controller="TilesCtrl">
       <div class="row">

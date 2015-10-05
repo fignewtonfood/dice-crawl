@@ -131,3 +131,16 @@ div {
 .playerdefault{
     display: none;
 }
+
+.red{
+    background-color: rgb(113, 15, 15);
+}
+.yellow{
+background-color:rgb(241, 241, 0);
+}
+.blue{
+background-color:rgb(41, 41, 76);
+}
+.green{
+background-color:green;
+}
