@@ -34,6 +34,7 @@ diceCrawl.directive("place", function() {
     };
 });
 
+//while this bit technically worked...it didnt work the way it ought to - MC
 // diceCrawl.directive("rollDice", function(){
 //     return function (scope, element, attrs){
 //         // element.bind("click", function() {
@@ -45,10 +46,27 @@ diceCrawl.directive("place", function() {
 // });
 
 diceCrawl.directive ("diceToRoll",function(){
+
     return{
         restrict: "E",
-        scope:{rolled: "&"
+        scope:{
+          rolled: "&"
     },
         template:'<button ng-click="rollDice()">Roll The Dice</button>'
     }
 })
+
+
+diceCrawl.directive("debug",function($compile){
+  return{
+    terminal: true,
+    priority: 100000,
+    link: function (scope, element){
+      var clone = element.clone();
+      element.attr("style","color:red");
+      clone.removeAttr("debug");
+      var clonedElement = $compile(clone)(scope);
+      element.after(clonedElement);
+    }
+  }
+});
