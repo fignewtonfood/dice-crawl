@@ -80,8 +80,24 @@ div {
 }
 
 .tile {
+  position: relative;
+  z-index: 1;
+}
+
+.tile__image {
   width:20vh;
   height:20vh;
+  z-index: 2;
+}
+
+.blue .tile__image{
+    content:url('../img/players/Blueplayer.png');
+    z-index: 5;
+}
+
+.btn__place {
+    z-index: 3;
+    position: absolute;
 }
 
 .row {
@@ -116,10 +132,21 @@ div {
     border-radius: 50%;
 }
 
-.player4{
+/*.blue{
     content:url(http://www.mathwarehouse.com/calculators/images/blue-square.png);
-    position: relative;
+    position: absolute;
     top: 25px;
     left: 25px;
     z-index: 5;
+}*/
+
+.blue{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 5;
+}
+
+
+.place {
 }

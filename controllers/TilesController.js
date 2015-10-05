@@ -13,4 +13,9 @@ diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory){
     $scope.dragon = TilesFactory.dragon;
 
 
+$scope.tileTest = function (tile) {
+            alert('this tile' + title);
+};
+
+
 });

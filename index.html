@@ -1,69 +1,59 @@
 <!doctype html>
 <html lang="en" ng-app="diceCrawl">
-<head>
-    <meta charset="UTF-8">
-    <title>Dice Crawl</title>
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
-    <script src="lib/chance.js"></script>
-    <script src="app.js"></script>
-    <script src="controllers/TilesController.js"></script>
-    <script src="services/TilesFactory.js"></script>
-    <script src="controllers/PlayersController.js"></script>
-    <script src="services/GamesFactory.js"></script>
-    <script src="services/TilesFactory.js"></script>
-    <script src="directives/myDirectives.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div ui-view>
-
-  </div>
-  <div class="window">
-    <div class="players" ng-controller="PlayersCtrl">
-      <div class="player" >
-        <h4></h4>
-      </div>
-      <div class="player">
-
-      </div>
-      <div class="player">
-
-      </div>
-      <div class="player">
-
-      </div>
-    </div>
-    <div class="board" ng-controller="TilesCtrl">
-      <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0">
-          <img class="tile" src="img/img10.jpg" alt="" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Dice Crawl</title>
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-ui-router.js"></script>
+        <script src="lib/chance.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers/TilesController.js"></script>
+        <script src="services/TilesFactory.js"></script>
+        <script src="controllers/PlayersController.js"></script>
+        <script src="services/GamesFactory.js"></script>
+        <script src="services/TilesFactory.js"></script>
+        <script src="directives/myDirectives.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div ui-view></div>
+        <div class="window">
+            <div class="players" ng-controller="PlayersCtrl">
+                <div class="player">
+                    <h4></h4>
+                </div>
+                <div class="player"></div>
+                <div class="player"></div>
+                <div class="player"></div>
+            </div>
+            <div class="board" ng-controller="TilesCtrl">
+                <div class="row">
+                    <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0" place>
+                        <img alt="" class="tile__image" src="img/img10.jpg"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5" place >
+                        <img alt="" class="tile__image" src="img/img10.jpg"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10" place>
+                        <img alt="" class="tile__image" rotate-tile src="img/img{{ tile.name }}.jpg"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15" place>
+                        <img alt="" class="tile__image" src="img/img10.jpg"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20" place>
+                        <img alt="" class="tile__image" src="img/img10.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="game"></div>
         </div>
-      </div>
-      <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5">
-          <img class="tile" src="img/img10.jpg" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10">
-          <img class="tile" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15">
-          <img class="tile" src="img/img10.jpg" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20">
-          <img class="tile" src="img/img10.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="game">
-
-    </div>
-  </div>
-</body>
+    </body>
 </html>
