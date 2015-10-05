@@ -63,6 +63,10 @@ div {
   flex-direction: column;
 }
 
+.player img{
+  height:15vh;
+  width:15vh;
+}
 .game {
   flex-grow:2
 
@@ -145,12 +149,14 @@ position: absolute;
 
 .red{
     background-color: rgb(113, 15, 15);
+    color:white;
 }
 .yellow{
 background-color:rgb(241, 241, 0);
 }
 .blue{
 background-color:rgb(41, 41, 76);
+color:white;
 }
 .green{
 background-color:green;

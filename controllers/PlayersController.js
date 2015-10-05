@@ -112,8 +112,10 @@ var races = [
 function Player(playerColor, diceCount, rollCount, score, abilities){
   this.playerColor = String(playerColor);
   this.diceCount = Number(25);
-  this.rollCount = Number(0);
   this.score = Number(0);
+  //rollCount represents the number of dice the player will roll during a turn.
+  // abilities can modify it as well as near end game situations EDGE CASES
+  this.rollCount = Number(5);
   this.abilities = {playerRace:{},playerClass:{}};
 }
 
@@ -124,6 +126,26 @@ function randomSelectDelete(selectedArray) {
   return selectedItem;
 }
 
+
+//the player clicks roll
+//diceCount is adjusted according to how many dice the player is able to roll
+//this affects the grid representing how many dice are left
+//for every number in the rollCount a dice object is created
+//each die is rolled (die.roll())
+    //which will return a random number from 1 to 6
+    
+
+Player.pullDiceToRoll(){
+  if (this.diceCount < this.rollCount) {
+    this.rollCount = this.diceCount;
+  } else {
+    this.diceCount -= this.rollCount;
+  }
+  while (var i <= rollCount ){//five will
+    roll(rollCount);
+    i += 1;
+  }
+}
 
 Player.prototype.setPlayerColor = function() {
   this.playerColor = randomSelectDelete(colors);

@@ -8,6 +8,7 @@
     <script src="lib/chance.js"></script>
     <script src="app.js"></script>
     <script src="controllers/TilesController.js"></script>
+    <script src="controllers/GamesController.js"></script>
     <script src="services/TilesFactory.js"></script>
     <script src="controllers/PlayersController.js"></script>
     <script src="services/GamesFactory.js"></script>
@@ -27,11 +28,7 @@
 <br>
          <img class="tile" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
          <img class="tile" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
-
-         <div dice-area>
              <dice-to-roll rolled="rollDice()" ></dice-to-roll>
-             <h2></h2>
-         </div>
         </div>
     </div>
     <div class="board" ng-controller="TilesCtrl">
@@ -65,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="game">
+    <div class="game" ng-controller="GamesCtrl" >
         <button type="button" name="button">Rotate Tile</button>
     </div>
   </div>
