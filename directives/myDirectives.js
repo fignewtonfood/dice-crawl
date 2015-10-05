@@ -25,3 +25,22 @@ diceCrawl.directive("showPlayer", function() {
         });
     }
 });
+
+// diceCrawl.directive("rollDice", function(){
+//     return function (scope, element, attrs){
+//         // element.bind("click", function() {
+//         //     var myRoll = chance.d6();
+//         //
+//         //      console.log("dice got rolled...not really but the roll is: " + myRoll + " and my playerColor is: " +  player);
+//         // });
+//     }
+// });
+
+diceCrawl.directive ("diceToRoll",function(){
+    return{
+        restrict: "E",
+        scope:{rolled: "&"
+    },
+        template:'<button ng-click="rollDice()">Roll The Dice</button>'
+    }
+})

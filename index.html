@@ -21,9 +21,14 @@
   </div>
   <div class="window">
     <div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
-        <div class="player {{player.playerColor}}" ng-repeat="player in players" >
-          {{ player.playerColor}}
+        <div class="player {{player.playerColor}}" ng-repeat="player in players" roll-dice>
+          {{ player.playerColor}} is a {{player.abilities.playerRace.raceName}}  {{player.abilities.playerClass.className}}
          Dice Count is:  {{player.diceCount}}
+
+         <div dice-area>
+             <dice-to-roll rolled="rollDice()" ng-model="diceVal"></dice-to-roll>
+             <h2></h2>
+         </div>
         </div>
     </div>
     <div class="board" ng-controller="TilesCtrl">

@@ -138,6 +138,10 @@ Player.prototype.updateRollCount = function(){
 
 }
 
+Player.prototype.rollDice = function(){
+    diceVal = chance.d6();
+}
+
 Player.prototype.changeScore = function(){
 
 }
@@ -157,6 +161,5 @@ Player.prototype.changeScore = function(){
      }//end for
    }//end init
 
-$scope.
 
 })
