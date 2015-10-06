@@ -13,7 +13,7 @@ diceCrawl.directive("rotateTile", function() {
             element.removeClass("rotate2");
             element.removeClass("rotate3");
             element.removeClass("rotate4");
-            element.toggleClass("rotate"+i);
+            element.addClass("rotate"+i);
         });
     };
 });
@@ -34,7 +34,7 @@ diceCrawl.directive("showPlayer", function() {
 diceCrawl.directive("place", function() {
     return function(scope, element) {
         element.bind("click", function() {
-            element.append('<img src="/img/players/Blueplayer.png" class="blue"/>');
+            element.append('<img src="/img/players/BluePlayer.png" class="blue"/>');
         });
     };
 });

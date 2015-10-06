@@ -2,7 +2,7 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
     var factory = {};
     factory.maxPlayers = 4;
     factory.players = [];
-console.log('GamesFactory is loaded');
+// console.log('GamesFactory is loaded');
 
 
 
