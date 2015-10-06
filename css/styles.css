@@ -52,6 +52,68 @@ div {
   border-style:solid;
 }
 
+/* splash page ============================= */
+
+section {
+
+}
+
+.splash {
+    width: 90%;
+    margin: 10em auto;
+}
+.splash__title {
+    font-size: 5em;
+    font-family: fantasy;
+    text-align: center;
+}
+.splash__start {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+}
+.splash__start:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+/* buttons =============================== */
+
+.main__callToAction {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+
+}
+
+.main__callToAction:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+
+/* ================================= layout */
+
 .window {
  display:flex;
  flex-grow:10;
@@ -125,20 +187,21 @@ position: absolute;
 .player2{
     border-radius: 50%;
 }
-
+*/
 .player3{
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     top: 5vh;
     left: 5vh;
     z-index: 5;
-}*/
+}
 
 .player-marker{
     border-radius: 50%;
-    position: relative;
-    top: 5vh;
-    left: 2vh;
+    position: absolute;
+    top: 5;
+    left: 5;
+    display: block;
     z-index: 5;
 }
 
@@ -146,6 +209,12 @@ position: absolute;
     display: none;
 }
 
+.show {
+    position: absolute;
+    z-index: 5;
+    display: block;
+
+}
 
 .red{
     background-color: rgb(113, 15, 15);

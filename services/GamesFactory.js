@@ -1,23 +1,42 @@
-diceCrawl.factory('GamesFactory', function GamesFactory(){
+diceCrawl.factory('GamesFactory', function GamesFactory() {
     var factory = {};
     factory.maxPlayers = 4;
     factory.players = [];
-// console.log('GamesFactory is loaded');
+    console.log('GamesFactory is loaded');
 
-
-        factory.newGame = function() {
-        factory.games.push({ players: [], board: [] });
-
-
-
-   };
-   return factory;
-});
-
-diceCrawl.factory("sharedDataService", function() {
-            var mySharedObject =  { shared: 0 };
-            return mySharedObject;
+    factory.newGame = function() {
+        factory.games.push({
+            players: [],
+            board: []
         });
+    };
+
+    // factory.currentPlayerImage = 0;
+    // factory.availableImages = [{
+    //     src: "/img/players/BluePlayer.png"
+    // }, {
+    //     src: "/img/players/GreenPlayer.png"
+    // }, {
+    //     src: "/img/players/RedPlayer.png"
+    // }, {
+    //     src: "/img/players/YellowPlayer.png"
+    // }];
+    // factory.nextButton = function() {
+    //     factory.currentImage++;
+    //     if (factory.currentPlayerImage > (factory.availableImages.length - 1)) {
+    //         factory.currentImage = 0;
+    //     }
+    // };
+    // factory.prevButton = function() {
+    //     $scope.currentImage--;
+    //     if (factory.currentPlayerImage < 0) {
+    //         factory.currentImage = (factory.availableImages.length - 1);
+    //     }
+    // };
+
+    return factory;
+
+});
 
 //
 // notes:

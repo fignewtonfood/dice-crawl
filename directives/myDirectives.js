@@ -82,8 +82,8 @@ diceCrawl.directive ("diceToRoll",function(){
 
     },
         template:'<button action="rollDice()">Roll The Dice</button>'
-    }
-})
+    };
+});
 
 
 diceCrawl.directive("debug",function($compile){
@@ -97,5 +97,5 @@ diceCrawl.directive("debug",function($compile){
       var clonedElement = $compile(clone)(scope);
       element.after(clonedElement);
     }
-  }
+};
 });

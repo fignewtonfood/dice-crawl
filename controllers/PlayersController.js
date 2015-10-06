@@ -149,12 +149,12 @@ function randomSelectDelete(selectedArray) {
 
 Player.prototype.setPlayerColor = function() {
   this.playerColor = randomSelectDelete(colors);
-}
+};
 
 Player.prototype.setAbilities = function(){
   this.abilities.playerRace = randomSelectDelete(races);
   this.abilities.playerClass = randomSelectDelete(classes);
-}
+};
 
 
  //Functions to place in the gameFactory at somePoint
@@ -171,7 +171,7 @@ Player.prototype.setAbilities = function(){
             //  console.log("Player score: " + player.score);
             //  console.log("Player race: " + player.abilities.playerRace.raceName);
      }//end for
-   }//end init
+ };//end init
 
 
-})
+});
