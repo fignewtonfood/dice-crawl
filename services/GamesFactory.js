@@ -14,10 +14,16 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
    return factory;
 });
 
-diceCrawl.factory("sharedDataService", function() {
-            var mySharedObject =  { shared: 0 };
-            return mySharedObject;
-        });
+diceCrawl.factory("rotateTileButton", function() {
+    var mySharedObject =  { shared: 0 };
+    return mySharedObject;
+});
+
+diceCrawl.factory("revealTileButton", function() {
+    var mySharedObject =  { shared: 0 };
+    return mySharedObject;
+});
+
 
 //
 // notes:

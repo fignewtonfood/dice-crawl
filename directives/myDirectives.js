@@ -1,29 +1,21 @@
 var i = 0;
 
-diceCrawl.directive("toggleRotateTile", function(sharedDataService) {
+diceCrawl.directive("toggleRotateTile", function(rotateTileButton) {
     return {
-            scope: {text: "="},
             link: function (scope, element) {
                 element.bind("click", function() {
-                    sharedDataService.shared ? sharedDataService.shared-=1 : sharedDataService.shared+=1;
-                    // sharedDataService.shared = j.scope;
-                    console.log("yaya");
-                    console.log(sharedDataService.shared);
-                    console.log(scope.text);
+                    rotateTileButton.shared ? rotateTileButton.shared-=1 : rotateTileButton.shared+=1;
+                    element.toggleClass("btn-info");
             });
         }
     };
 });
 
-// console.log(j);
-
-diceCrawl.directive("rotateTile", function(sharedDataService) {
+diceCrawl.directive("rotateTile", function(rotateTileButton) {
     return {
-        scope: {text: "@"},
         link: function (scope, element) {
             element.bind("click", function() {
-                console.log(sharedDataService.shared);
-                if (sharedDataService.shared) {
+                if (rotateTileButton.shared) {
                     if (i<4) {
                         i++;
                     } else {
@@ -40,24 +32,35 @@ diceCrawl.directive("rotateTile", function(sharedDataService) {
         }
     };
 });
-/*
-diceCrawl.directive("showPlayer", function() {
-    return function (scope, element) {
-        element.bind("click", function() {
-            if (i<4) {
-                i++;
-            } else {
-                i=0;
-            }
-            element.toggleClass("player"+i);
-        });
+
+diceCrawl.directive("toggleRevealTile", function(revealTileButton) {
+    return {
+            link: function (scope, element) {
+                element.bind("click", function() {
+                    revealTileButton.shared ? revealTileButton.shared-=1 : revealTileButton.shared+=1;
+                    element.toggleClass("btn-warning");
+            });
+        }
     };
 });
-*/
+
+diceCrawl.directive("revealTile", function(revealTileButton) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (revealTileButton.shared) {
+                    element.removeClass("backside");
+                    element.addClass("backside-off");
+                }
+            });
+        }
+    };
+});
+
 diceCrawl.directive("place", function() {
     return function(scope, element) {
         element.bind("click", function() {
-            element.append('<img src="/img/players/BluePlayer.png" class="blue"/>');
+            element.append('<img src="img/players/BluePlayer.png" class="blue"/>');
         });
     };
 });
@@ -74,17 +77,14 @@ diceCrawl.directive("place", function() {
 // });
 
 diceCrawl.directive ("diceToRoll",function(){
-
     return{
         restrict: "E",
         scope:{
           roll: "&"
-
     },
         template:'<button action="rollDice()">Roll The Dice</button>'
     }
 })
-
 
 diceCrawl.directive("debug",function($compile){
   return{
