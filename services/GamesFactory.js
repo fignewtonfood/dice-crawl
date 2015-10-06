@@ -5,8 +5,6 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
 // console.log('GamesFactory is loaded');
 
 
-
-
         factory.newGame = function() {
         factory.games.push({ players: [], board: [] });
 
@@ -15,6 +13,11 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
    };
    return factory;
 });
+
+diceCrawl.factory("sharedDataService", function() {
+            var mySharedObject =  { shared: 0 };
+            return mySharedObject;
+        });
 
 //
 // notes:

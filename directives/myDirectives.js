@@ -1,20 +1,43 @@
 var i = 0;
 
-diceCrawl.directive("rotateTile", function() {
-    return function (scope, element) {
-        element.bind("click", function() {
-            if (i<4) {
-                i++;
-            } else {
-                i=1;
-            }
-            element.removeClass("rotate0");
-            element.removeClass("rotate1");
-            element.removeClass("rotate2");
-            element.removeClass("rotate3");
-            element.removeClass("rotate4");
-            element.addClass("rotate"+i);
-        });
+diceCrawl.directive("toggleRotateTile", function(sharedDataService) {
+    return {
+            scope: {text: "="},
+            link: function (scope, element) {
+                element.bind("click", function() {
+                    sharedDataService.shared ? sharedDataService.shared-=1 : sharedDataService.shared+=1;
+                    // sharedDataService.shared = j.scope;
+                    console.log("yaya");
+                    console.log(sharedDataService.shared);
+                    console.log(scope.text);
+            });
+        }
+    };
+});
+
+// console.log(j);
+
+diceCrawl.directive("rotateTile", function(sharedDataService) {
+    return {
+        scope: {text: "@"},
+        link: function (scope, element) {
+            element.bind("click", function() {
+                console.log(sharedDataService.shared);
+                if (sharedDataService.shared) {
+                    if (i<4) {
+                        i++;
+                    } else {
+                        i=1;
+                    }
+                    element.removeClass("rotate0");
+                    element.removeClass("rotate1");
+                    element.removeClass("rotate2");
+                    element.removeClass("rotate3");
+                    element.removeClass("rotate4");
+                    element.addClass("rotate"+i);
+                }
+            });
+        }
     };
 });
 /*
