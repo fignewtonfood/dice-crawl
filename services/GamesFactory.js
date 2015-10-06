@@ -2,9 +2,7 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
     var factory = {};
     factory.maxPlayers = 4;
     factory.players = [];
-console.log('GamesFactory is loaded');
-
-
+// console.log('GamesFactory is loaded');
 
 
         factory.newGame = function() {
@@ -15,6 +13,11 @@ console.log('GamesFactory is loaded');
    };
    return factory;
 });
+
+diceCrawl.factory("sharedDataService", function() {
+            var mySharedObject =  { shared: 0 };
+            return mySharedObject;
+        });
 
 //
 // notes:

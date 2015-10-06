@@ -165,11 +165,11 @@ Player.prototype.setAbilities = function(){
          player.setAbilities();
          $scope.players.push(player);
 
-             console.log("Player: " + i + " is: ");
-             console.log("Player Color: " + player.playerColor);
-             console.log("Dice count: " + player.diceCount);
-             console.log("Player score: " + player.score);
-             console.log("Player race: " + player.abilities.playerRace.raceName);
+            //  console.log("Player: " + i + " is: ");
+            //  console.log("Player Color: " + player.playerColor);
+            //  console.log("Dice count: " + player.diceCount);
+            //  console.log("Player score: " + player.score);
+            //  console.log("Player race: " + player.abilities.playerRace.raceName);
      }//end for
    }//end init
 
