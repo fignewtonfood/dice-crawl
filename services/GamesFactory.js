@@ -24,6 +24,11 @@ diceCrawl.factory("revealTileButton", function() {
     return mySharedObject;
 });
 
+diceCrawl.factory("placePlayerButton", function() {
+    var mySharedObject =  { shared: 0, color: "" };
+    return mySharedObject;
+});
+
 
 //
 // notes:

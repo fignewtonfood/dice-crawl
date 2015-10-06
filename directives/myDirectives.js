@@ -5,7 +5,7 @@ diceCrawl.directive("toggleRotateTile", function(rotateTileButton) {
             link: function (scope, element) {
                 element.bind("click", function() {
                     rotateTileButton.shared ? rotateTileButton.shared-=1 : rotateTileButton.shared+=1;
-                    element.toggleClass("btn-info");
+                    element.toggleClass("btn-warning");
             });
         }
     };
@@ -51,6 +51,38 @@ diceCrawl.directive("revealTile", function(revealTileButton) {
                 if (revealTileButton.shared) {
                     element.removeClass("backside");
                     element.addClass("backside-off");
+                }
+            });
+        }
+    };
+});
+
+diceCrawl.directive("togglePlacePlayer", function(placePlayerButton) {
+    return {
+            link: function (scope, element, attrs) {
+                element.bind("click", function() {
+                    placePlayerButton.shared ? placePlayerButton.shared-=1 : placePlayerButton.shared+=1;
+                    placePlayerButton.color = attrs.togglePlacePlayer;
+                    element.toggleClass("btn-info");
+            });
+        }
+    };
+});
+
+diceCrawl.directive("placePlayer", function(placePlayerButton) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placePlayerButton.shared) {
+                    if (placePlayerButton.color == "blue"){
+                        element.next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "green"){
+                        element.next().next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "red"){
+                        element.next().next().next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "yellow"){
+                        element.next().next().next().next().next().toggleClass("hide");
+                    }
                 }
             });
         }
