@@ -167,3 +167,20 @@ background-color:green;
     top: 20;
     left: 20;
 }*/
+
+.die {
+    width:3.8vh;
+    height:3.9vh;
+}
+
+.not {
+    width:1%;
+    height:3px;
+
+}
+
+.dice {
+    display:flex;
+    justify-content:center;
+
+}

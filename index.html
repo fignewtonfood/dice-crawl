@@ -42,8 +42,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5" place >
-          <img class="tile__image" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
+        <div class="tile" rotate-tile src ng-repeat="tile in tiles | limitTo: 5: 5" place style="background-image:url('img/img{{ tile.name }}.jpg'); background-size: 100%;">
+            <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
         </div>
       </div>
       <div class="row">
