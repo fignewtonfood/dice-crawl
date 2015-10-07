@@ -59,7 +59,7 @@ div {
 
 .players {
   flex-grow:2;
-  display:flex
+  display:flex;
   flex-direction: column;
 }
 
