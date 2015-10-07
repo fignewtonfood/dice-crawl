@@ -178,7 +178,7 @@ background-color:green;
 
 .backside{
     position: absolute;
-      z-index: 2;
+      z-index: ;
       width:20vh;
       height:20vh;
     z-index: 10;
@@ -198,3 +198,21 @@ background-color:green;
     top: 20;
     left: 20;
 }*/
+
+.die {
+    width:3.8vh;
+    height:3.9vh;
+}
+
+.not {
+    width:1%;
+    height:3px;
+
+}
+
+.dice {
+    display:flex;
+    justify-content:center;
+    z-index:-99999;
+
+}
