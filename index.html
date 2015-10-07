@@ -14,12 +14,11 @@
     <script src="services/GamesFactory.js"></script>
     <script src="services/TilesFactory.js"></script>
     <script src="directives/myDirectives.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="window" >
-        <div ui-view="players" ></div>
+        <div ui-view="players" class="players" ng-init="initPlayers()"></div>
         <div class="board" ng-controller="TilesCtrl">
           <div class="row">
             <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
@@ -77,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div ui-view="game" ></div>
+        <div ui-view="game" class="game"></div>
     </div>
 
 </body>

@@ -5,7 +5,7 @@
 
 </div> -->
 
-<div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
+<div  ng-init="initPlayers()">
     <div class="player {{player.playerColor}}" ng-repeat="player in players">
      <img class="tile" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
      <img class="tile" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
