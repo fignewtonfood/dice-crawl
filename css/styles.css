@@ -46,16 +46,62 @@ html {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 
 div {
   border:1px;
   border-style:solid;
 }
 
+=======
+/* splash page ============================= */
+
+section {
+
+}
+
+.splash {
+    width: 90%;
+    margin: 10em auto;
+
+}
+
+.splash__title {
+    font-size: 5em;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.splash__start {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.splash__start:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+/* ==================================== layout */
+
+>>>>>>> upstream/master
 .window {
  display:flex;
  flex-grow:10;
 }
+
+/* ==================================== player */
 
 .players {
   flex-grow:2;
@@ -63,14 +109,22 @@ div {
   flex-direction: column;
 }
 
-.player img{
-  height:15vh;
-  width:15vh;
+.player {
+  height:25vh;
 }
-.game {
-  flex-grow:2
+
+.player__race, .player__class{
+    width: 10vw;
 
 }
+
+.dice-rolled {
+    height: 5vh;
+    border: 1px solid #000;
+}
+
+
+/* ===================================== board */
 
 .board {
   flex-grow:6
@@ -79,9 +133,8 @@ div {
   justify-content:center;
 }
 
-.player {
-  height:25vh;
-
+.row {
+  display:flex;
 }
 
 .tile {
@@ -93,14 +146,54 @@ div {
 
 .tile__image {
 position: absolute;
-  z-index: 2;
   width:20vh;
   height:20vh;
+  z-index: 2;
 }
 
-.row {
-  display:flex;
+.backside{
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    z-index: 10;
 }
+
+.backside-off{
+    display:none;
+}
+
+/* ====================================== game */
+
+.game {
+  flex-grow:2
+
+}
+
+/* ==================================== button */
+
+.main__callToAction {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+
+}
+
+.main__callToAction:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+/* feature ========================== rotate */
 
 .rotate1{
   transform: rotate(90deg);
@@ -118,10 +211,14 @@ position: absolute;
   transform: rotate(0deg);
 }
 
+<<<<<<< HEAD
 .dice-rolled {
   max-height: 25px;
   max-width: 25px;
 }
+=======
+
+>>>>>>> upstream/master
 
 /*.player1{
     border-radius: 50%;
@@ -176,16 +273,16 @@ color: black;
 background-color:green;
 }
 
+<<<<<<< HEAD
 .backside{
     position: absolute;
       width:20vh;
       height:20vh;
     z-index: 10;
 }
+=======
+>>>>>>> upstream/master
 
-.backside-off{
-    display:none;
-}
 
 .player-btn{
     float: right;
