@@ -1,5 +1,10 @@
-diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory){
+diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, $http, TilesFactory){
     $scope.TilesFactory = TilesFactory;
+
+    // $http.get('tiles.json').success(function(data) {
+    //     $scope.tiles = data;
+    // })
+
     $scope.getTiles=function(n){
         return new Array(n);
     };

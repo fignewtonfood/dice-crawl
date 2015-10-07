@@ -69,6 +69,27 @@ diceCrawl.directive("togglePlacePlayer", function(placePlayerButton) {
     };
 });
 
+// diceCrawl.directive("placePlayer", function(placePlayerButton) {
+//     return {
+//         link: function (scope, element) {
+//             element.bind("click", function() {
+//                 if (placePlayerButton.shared) {
+//                     if (placePlayerButton.color == "blue"){
+//                         element.next().next().toggleClass("hide");
+//                     } else if (placePlayerButton.color == "green"){
+//                         element.next().next().next().toggleClass("hide");
+//                     } else if (placePlayerButton.color == "red"){
+//                         element.next().next().next().next().toggleClass("hide");
+//                     } else if (placePlayerButton.color == "yellow"){
+//                         element.next().next().next().next().next().toggleClass("hide");
+//                     }
+//                 }
+//             });
+//         }
+//     };
+// });
+
+
 diceCrawl.directive("placePlayer", function(placePlayerButton) {
     return {
         link: function (scope, element) {
@@ -89,6 +110,9 @@ diceCrawl.directive("placePlayer", function(placePlayerButton) {
     };
 });
 
+
+
+
 // diceCrawl.directive("place", function() {
 //     return function(scope, element) {
 //         element.bind("click", function() {
@@ -108,15 +132,15 @@ diceCrawl.directive("placePlayer", function(placePlayerButton) {
 //     }
 // });
 
-diceCrawl.directive ("diceToRoll",function(){
-    return{
-        restrict: "E",
-        scope:{
-          roll: "&"
-    },
-        template:'<button action="rollDice()">Roll The Dice</button>'
-    }
-})
+// diceCrawl.directive ("diceToRoll",function(){
+//     return{
+//         restrict: "E",
+//         scope:{
+//           roll: "&"
+//     },
+//         template:'<button action="rollDice()">Roll The Dice</button>'
+//     }
+// })
 
 diceCrawl.directive("debug",function($compile){
   return{
