@@ -116,6 +116,7 @@ function Player(playerColor, diceCount, rollCount, score, abilities){
   //rollCount represents the number of dice the player will roll during a turn.
   // abilities can modify it as well as near end game situations EDGE CASES
   this.rollCount = Number(5);
+  this.roll = [];
   this.abilities = {playerRace:{},playerClass:{}};
 }
 
@@ -156,6 +157,9 @@ Player.prototype.setAbilities = function(){
   this.abilities.playerClass = randomSelectDelete(classes);
 }
 
+Player.prototype.diceRoll = function() {
+  this.roll = GamesFactory.rollDice(); 
+}
 
  //Functions to place in the gameFactory at somePoint
  $scope.initPlayers = function (){
@@ -163,6 +167,7 @@ Player.prototype.setAbilities = function(){
          var player = new Player();
          player.setPlayerColor();
          player.setAbilities();
+         player.diceRoll(); 
          $scope.players.push(player);
 
             //  console.log("Player: " + i + " is: ");
