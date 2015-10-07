@@ -1,6 +1,18 @@
-<div>
+<!-- <div>
   <div ng-repeat="player in players">
     {{ player.playerColor}}
   </div>
 
+</div> -->
+
+<div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
+    <div class="player {{player.playerColor}}" ng-repeat="player in players">
+      {{ player.playerColor}} is a {{player.abilities.playerRace.raceName}}  {{player.abilities.playerClass.className}} ---
+     <span class="dice-count">Dice Count is:  {{player.diceCount}}</span>
+<br>
+     <img class="tile" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
+     <img class="tile" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" /><br>
+     <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
+        <dice-to-roll rolled="rollDice()" ></dice-to-roll>
+    </div>
 </div>
