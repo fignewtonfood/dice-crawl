@@ -34,7 +34,7 @@
           <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[2]}}.png" alt=""/>
           <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[3]}}.png" alt=""/>
           <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[4]}}.png" alt=""/>
-          <button type="submit" ng-click="player.diceRoll()" class="rolled">Roll Dice</button> 
+          <button type="submit" ng-submit="GamesFactory.rollDice()" class="roll {{player.playerColor}}">Roll Dice</button>
         </div>
     </div>
     <div class="board" ng-controller="TilesCtrl">

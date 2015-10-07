@@ -118,6 +118,11 @@ position: absolute;
   transform: rotate(0deg);
 }
 
+.dice-rolled {
+  max-height: 25px;
+  max-width: 25px;
+}
+
 /*.player1{
     border-radius: 50%;
 }
@@ -185,14 +190,6 @@ background-color:green;
 
 .player-btn{
     float: right;
-}
-
-.dice-count{
-    font-weight: bold;
-}
-
-.hide{
-    display:none;
 }
 
 /*.blue {
