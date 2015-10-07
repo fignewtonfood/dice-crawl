@@ -121,7 +121,10 @@ position: absolute;
 .dice-rolled {
   max-height: 25px;
   max-width: 25px;
+  border: 1px solid black; 
 }
+
+
 
 /*.player1{
     border-radius: 50%;
@@ -157,7 +160,7 @@ position: absolute;
     color:white;
 }
 .yellow{
-background-color:rgb(241, 241, 0);
+background-color:rgb(203, 198, 47);
 }
 .blue{
 background-color:rgb(41, 41, 76);
@@ -191,6 +194,7 @@ background-color:green;
 .player-btn{
     float: right;
 }
+
 
 /*.blue {
     position: absolute;
