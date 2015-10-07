@@ -178,7 +178,6 @@ background-color:green;
 
 .backside{
     position: absolute;
-      z-index: ;
       width:20vh;
       height:20vh;
     z-index: 10;
@@ -213,6 +212,5 @@ background-color:green;
 .dice {
     display:flex;
     justify-content:center;
-    z-index:-99999;
 
 }

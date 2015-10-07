@@ -144,16 +144,17 @@ diceCrawl.directive('bgImg', function(){
 
 // diceCrawl.directive('dice', function(){
 //   var templatehtml = "<div><p>sdf</p></div>";
-//     // return {
-//     //   link: function(scope, element, attrs){
-//     //     var divs = attrs.dice;
-//     //     // var templatehtml = "";
-//     //     for(var i = 0; i < divs; i++){
-//     //        templatehtml += "<div><p>sdf</p></div>";
-//     //     }
-//     //     console.log(divs);
-//     //   },
-//       // template: templatehtml
+//     return {
+//       template = "<div></div>";
+//       link: function(scope, element, attrs){
+//         var divs = attrs.dice;
+//         // var templatehtml = "";
+//         for(var i = 0; i < divs; i++){
+//            template += "<div><p>sdf</p></div>";
+//         }
+//         console.log(divs);
+//       },
+//       template: templatehtml
 //     return {templatehtml}
 //
 // });
