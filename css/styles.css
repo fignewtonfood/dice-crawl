@@ -46,6 +46,12 @@ html {
   box-sizing: border-box;
 }
 
+div {
+  border:1px;
+  border-style:solid;
+}
+
+
 /* splash page ============================= */
 
 section {
@@ -87,6 +93,7 @@ section {
 
 /* ==================================== layout */
 
+
 .window {
  display:flex;
  flex-grow:10;
@@ -96,7 +103,7 @@ section {
 
 .players {
   flex-grow:2;
-  display:flex
+  display:flex;
   flex-direction: column;
 }
 
@@ -202,8 +209,10 @@ position: absolute;
   transform: rotate(0deg);
 }
 
-
-
+.dice-rolled {
+  max-height: 25px;
+  max-width: 25px;
+}
 
 
 /*.player1{
@@ -240,7 +249,7 @@ position: absolute;
     color:white;
 }
 .yellow{
-background-color:rgb(203, 198, 47);
+background-color:rgb(241, 241, 0);
 }
 .blue{
 background-color:rgb(41, 41, 76);
@@ -260,11 +269,17 @@ background-color:green;
 }
 
 
+.backside{
+    position: absolute;
+      width:20vh;
+      height:20vh;
+    z-index: 10;
+}
+
 
 .player-btn{
     float: right;
 }
-
 
 /*.blue {
     position: absolute;
@@ -273,16 +288,19 @@ background-color:green;
     left: 20;
 }*/
 
-/* clear fix ================ */
+.die {
+    width:3.8vh;
+    height:3.9vh;
+}
 
-.pull-left {
-    float: left;
+.not {
+    width:1%;
+    height:3px;
+
 }
-.pull-right {
-    float: right;
-}
-.group:after {
-    content: "";
-    display: table;
-    clear: both;
+
+.dice {
+    display:flex;
+    justify-content:center;
+
 }

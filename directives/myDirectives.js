@@ -75,13 +75,13 @@ diceCrawl.directive("placePlayer", function(placePlayerButton) {
             element.bind("click", function() {
                 if (placePlayerButton.shared) {
                     if (placePlayerButton.color == "blue"){
-                        element.next().next().toggleClass("hide");
+                        element.children().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "green"){
-                        element.next().next().next().toggleClass("hide");
+                        element.children().next().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "red"){
-                        element.next().next().next().next().toggleClass("hide");
+                        element.children().next().next().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "yellow"){
-                        element.next().next().next().next().next().toggleClass("hide");
+                        element.children().next().next().next().next().next().toggleClass("hide");
                     }
                 }
             });
@@ -131,3 +131,30 @@ diceCrawl.directive("debug",function($compile){
     }
   }
 });
+
+diceCrawl.directive('bgImg', function(){
+    return function(scope, element, attrs){
+        var url = attrs.bgImg;
+        element.css({
+            'background-image': 'url(' + url +')',
+            'background-size' : 'cover'
+        });
+    };
+});
+
+// diceCrawl.directive('dice', function(){
+//   var templatehtml = "<div><p>sdf</p></div>";
+//     return {
+//       template = "<div></div>";
+//       link: function(scope, element, attrs){
+//         var divs = attrs.dice;
+//         // var templatehtml = "";
+//         for(var i = 0; i < divs; i++){
+//            template += "<div><p>sdf</p></div>";
+//         }
+//         console.log(divs);
+//       },
+//       template: templatehtml
+//     return {templatehtml}
+//
+// });
