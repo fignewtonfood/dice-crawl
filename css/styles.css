@@ -46,12 +46,6 @@ html {
   box-sizing: border-box;
 }
 
-
-div {
-  border:1px;
-  border-style:solid;
-}
-
 /* splash page ============================= */
 
 section {
@@ -91,10 +85,82 @@ section {
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 }
 
+/* ==================================== layout */
+
+.window {
+ display:flex;
+ flex-grow:10;
+}
+
+/* ==================================== player */
+
+.players {
+  flex-grow:2;
+  display:flex
+  flex-direction: column;
+}
+
+.player {
+  height:25vh;
+}
+
+.player__race, .player__class{
+    width: 10vw;
+
+}
+
+.dice-rolled {
+    height: 5vh;
+    border: 1px solid #000;
+}
+
+
+/* ===================================== board */
+
+.board {
+  flex-grow:6
+  display:flex;
+  flex-flow: wrap;
+  justify-content:center;
+}
+
+.row {
+  display:flex;
+}
+
+.tile {
+  position: relative;
+  width:20vh;
+  height:20vh;
+  z-index: 1;
+}
+
+.tile__image {
+position: absolute;
+  width:20vh;
+  height:20vh;
+  z-index: 2;
+}
+
+.backside{
+    position: absolute;
+    height: 20vh;
+    width: 20vh;
+    z-index: 10;
+}
+
+.backside-off{
+    display:none;
+}
+
+/* ====================================== game */
+
+.game {
+  flex-grow:2
+
+}
 
 /* ==================================== button */
-
-/* buttons =================== */
 
 .main__callToAction {
     background: #d4d4d4;
@@ -118,60 +184,7 @@ section {
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
 }
 
-
-
-
-
-
-.window {
- display:flex;
- flex-grow:10;
-}
-
-.players {
-  flex-grow:2;
-  display:flex
-  flex-direction: column;
-}
-
-.player img{
-  height:15vh;
-  width:15vh;
-}
-.game {
-  flex-grow:2
-
-}
-
-.board {
-  flex-grow:6
-  display:flex;
-  flex-flow: wrap;
-  justify-content:center;
-}
-
-.player {
-  height:25vh;
-
-}
-
-.tile {
-  position: relative;
-  width:20vh;
-  height:20vh;
-  z-index: 1;
-}
-
-.tile__image {
-position: absolute;
-  z-index: 2;
-  width:20vh;
-  height:20vh;
-}
-
-.row {
-  display:flex;
-}
+/* feature ========================== rotate */
 
 .rotate1{
   transform: rotate(90deg);
@@ -189,11 +202,7 @@ position: absolute;
   transform: rotate(0deg);
 }
 
-.dice-rolled {
-  max-height: 25px;
-  max-width: 25px;
-  border: 1px solid black; 
-}
+
 
 
 
@@ -250,17 +259,7 @@ color: black;
 background-color:green;
 }
 
-.backside{
-    position: absolute;
-      z-index: 2;
-      width:20vh;
-      height:20vh;
-    z-index: 10;
-}
 
-.backside-off{
-    display:none;
-}
 
 .player-btn{
     float: right;
