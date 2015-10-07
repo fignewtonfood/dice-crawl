@@ -89,13 +89,13 @@ diceCrawl.directive("placePlayer", function(placePlayerButton) {
     };
 });
 
-diceCrawl.directive("place", function() {
-    return function(scope, element) {
-        element.bind("click", function() {
-            element.append('<img src="img/players/BluePlayer.png" class="blue"/>');
-        });
-    };
-});
+// diceCrawl.directive("place", function() {
+//     return function(scope, element) {
+//         element.bind("click", function() {
+//             element.append('<img src="img/players/BluePlayer.png" class="blue"/>');
+//         });
+//     };
+// });
 
 //while this bit technically worked...it didnt work the way it ought to - MC
 // diceCrawl.directive("rollDice", function(){

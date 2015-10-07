@@ -11,12 +11,12 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
     };
 
     factory.rollDice = function() {
-        factory.roll = []; 
-        numberToRoll = 5;  
-        for(var i=0; i < numberToRoll ; i++ ) { 
+        factory.roll = [];
+        numberToRoll = 5;
+        for(var i=0; i < numberToRoll ; i++ ) {
             factory.roll.push( (Math.floor(Math.random() * 6) + 1) );
         }
-        return factory.roll; 
+        return factory.roll;
     }
 
    return factory;
@@ -32,6 +32,10 @@ diceCrawl.factory("revealTileButton", function() {
     return mySharedObject;
 });
 
+diceCrawl.factory("placePlayerButton", function() {
+    var mySharedObject =  { shared: 0, color: "" };
+    return mySharedObject;
+});
 
 //
 // notes:
