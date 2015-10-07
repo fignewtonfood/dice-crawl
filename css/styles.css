@@ -52,6 +52,77 @@ div {
   border-style:solid;
 }
 
+/* splash page ============================= */
+
+section {
+
+}
+
+.splash {
+    width: 90%;
+    margin: 10em auto;
+
+}
+
+.splash__title {
+    font-size: 5em;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.splash__start {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.splash__start:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+
+/* ==================================== button */
+
+/* buttons =================== */
+
+.main__callToAction {
+    background: #d4d4d4;
+    border-radius: 4px;
+    border: 1px solid #727272;
+    color: #727272;
+    cursor: pointer;
+    padding: .5em 3.6em;
+    font-size: 1.8rem;
+    display: table;
+    margin: 1em auto;
+    text-decoration: none;
+    transition: 1s;
+
+}
+
+.main__callToAction:hover {
+    border: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+
+
+
+
+
 .window {
  display:flex;
  flex-grow:10;
@@ -198,3 +269,17 @@ background-color:green;
     top: 20;
     left: 20;
 }*/
+
+/* clear fix ================ */
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}

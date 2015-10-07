@@ -1,6 +1,21 @@
-<div>
+<!-- <div>
   <div ng-repeat="player in players">
     {{ player.playerColor}}
   </div>
 
+</div> -->
+
+<div class="players" ng-init="initPlayers()">
+    <div class="player {{player.playerColor}}" ng-repeat="player in players">
+     <img class="tile" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
+     <img class="tile" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
+    <br>
+      <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[0]}}.png" alt=""/>
+      <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[1]}}.png" alt=""/>
+      <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[2]}}.png" alt=""/>
+      <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[3]}}.png" alt=""/>
+      <img class="dice-rolled" ng-src="img/dice/Blank{{player.roll[4]}}.png" alt=""/>
+      <button type="submit" ng-click="player.diceRoll()" class="rolled">Roll Dice</button><br>
+      <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
+    </div>
 </div>
