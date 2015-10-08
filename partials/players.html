@@ -6,7 +6,6 @@
 </div> -->
 
 <div  ng-init="initPlayers()">
-<<<<<<< HEAD
     <div id="playerStyling" class="player {{player.playerColor}}" ng-repeat="player in players">
         <table style="width:100%">
             <tr>
@@ -22,8 +21,8 @@
                                 {{player.abilities.playerRace.powerOne.powerName}}
                             </td>
                             <td>
-                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerOne.diceOne}}.png"/>
-                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerOne.diceTwo}}.png"/>
+                                <img style="border:solid 1px" class="inactive" die-target src="img/dice/blank{{player.abilities.playerRace.powerOne.diceOne}}.png"/>
+                                <img style="border:solid 1px" class="inactive" die-target src="img/dice/blank{{player.abilities.playerRace.powerOne.diceTwo}}.png"/>
                             </td>
                         </tr>
                         <tr>
@@ -90,7 +89,7 @@
             </tr>
             <tr>
                 <td>
-                    <img ng-repeat="die in player.roll track by $index" class="dice-rolled" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
+                    <img ng-repeat="die in player.roll track by $index" class="dice-rolled" place-die die-image="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
                     <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
                     <button type="submit" ng-click="player.diceRoll()" class="btn">Roll Dice</button>
                 </td>
