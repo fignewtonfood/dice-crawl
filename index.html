@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dice Crawl</title>
+    <script src="lib/jquery-2.1.4.js"></script>
     <script src="lib/angular.js"></script>
     <script src="lib/angular-ui-router.js"></script>
     <script src="lib/chance.js"></script>
@@ -26,43 +27,43 @@
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img ng-repeat="player in players track by $index" class="{{ ((outerIndex===0 && $index===0) || (outerIndex===4 && $index===1)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
+              <img ng-repeat="player in players track by $index" class="{{ ((outerIndex===0 && $index===0) || (outerIndex===4 && $index===1)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker tile-{{tile.name}}" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 5 track by $index" place-player="{{ tile.name }}" rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
               <img class="backside" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker tile-{{tile.name}}" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 10 track by $index" place-player="{{ tile.name }}" rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
               <img class="{{ $index!==2 ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker tile-{{tile.name}}" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" chest>
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 15 track by $index" place-player="{{ tile.name }}" rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" chest>
               <img class="backside" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker tile-{{tile.name}}" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20 track by $index" place-player="{{ tile.name }}" rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
               <img class="{{ ($index!==0 && $index!==4) ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img ng-repeat="player in players" class="{{ ((outerIndex===0 && $index===2) || (outerIndex===4 && $index===3)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
+              <img ng-repeat="player in players" class="{{ ((outerIndex===0 && $index===2) || (outerIndex===4 && $index===3)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker tile-{{tile.name}}" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
         </div>

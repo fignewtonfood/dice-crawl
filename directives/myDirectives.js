@@ -71,23 +71,25 @@ diceCrawl.directive("togglePlacePlayer", function(placePlayerButton) {
 
 diceCrawl.directive("placePlayer", function(placePlayerButton) {
     return {
-        link: function (scope, element) {
+        link: function (scope, element, attrs) {
             element.bind("click", function() {
                 if (placePlayerButton.shared) {
                     if (placePlayerButton.color == "blue"){
-                        element.children().next().next().toggleClass("hide");
+                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-blue').toggleClass("hide");
                     } else if (placePlayerButton.color == "green"){
-                        element.children().next().next().next().toggleClass("hide");
+                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-green').toggleClass("hide");
                     } else if (placePlayerButton.color == "red"){
-                        element.children().next().next().next().next().toggleClass("hide");
+                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-red').toggleClass("hide");
                     } else if (placePlayerButton.color == "yellow"){
-                        element.children().next().next().next().next().next().toggleClass("hide");
+                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-yellow').toggleClass("hide");
                     }
                 }
             });
         }
     };
 });
+
+
 
 // diceCrawl.directive("place", function() {
 //     return function(scope, element) {
@@ -115,8 +117,8 @@ diceCrawl.directive ("diceToRoll",function(){
           roll: "&"
     },
         template:'<button action="rollDice()">Roll The Dice</button>'
-    }
-})
+    };
+});
 
 diceCrawl.directive("debug",function($compile){
   return{
