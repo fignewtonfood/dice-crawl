@@ -196,24 +196,24 @@ diceCrawl.directive("dieImage", function(placeDieButton, grabDieImage) {
     };
 });
 
-// diceCrawl.directive("dieValue", function(placeDieButton, grabDieValue) {
-//     return {
-//         link: function (scope, element, attrs) {
-//             element.bind("click", function() {
-//                 if (placeDieButton.shared) {
-//                     grabDieValue.dievalue += attrs.dieValue;
-//                 }
-//             });
-//         }
-//     };
-// });
-
 diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
     return {
         link: function (scope, element) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.remove();
+                }
+            });
+        }
+    };
+});
+
+diceCrawl.directive("dieTarget", function(placeDieButton, grabDieImage) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+                    element.append("<img class='dice-rolled' src='"+grabDieImage.dieimage+"'>");
                 }
             });
         }
