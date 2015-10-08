@@ -186,6 +186,7 @@ diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.remove();
+                    // console.log("place die" + scope.player.diceCount);
                 }
             });
         }
@@ -198,6 +199,10 @@ diceCrawl.directive("dieTarget", function(placeDieButton, grabDieImage) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.append("<img class='dice-rolled' src='"+grabDieImage.dieimage+"'>");
+                    scope.$apply(function() {
+                        scope.player.diceCount--;
+                        console.log(scope.player);
+                    });
                 }
             });
         }
