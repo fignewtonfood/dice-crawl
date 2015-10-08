@@ -1,19 +1,28 @@
 diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory, GamesFactory){
     $scope.TilesFactory = TilesFactory;
-    $scope.players = GamesFactory.players; 
+    $scope.players = GamesFactory.players;
 
-    $scope.getTiles=function(n){
-        return new Array(n);
-    };
-    function shuffle(o){
-      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-      o.splice(12,0, TilesFactory.dragon);
-      return o;
-    }
-    $scope.tiles = shuffle(TilesFactory.tiles);
 
     $scope.dragon = TilesFactory.dragon;
 
+  $scope.tiles = TilesFactory.boardTiles;
+
     $scope.treasure = "<div class='treasure'></div>";
+
+
+
+    $scope.findInColl = function(collection, item) {
+        var index = collection.indexOf(item);
+        return collection[i];
+
+      }
+
+      //something must trigger this event?
+      //will move the currente element from the array it is within and add it to an array elsewhere
+
+   $scope.moveMe = function(item,fromColl,toColl){
+     fromColl.splice(index,range)
+   }
+
 
 });

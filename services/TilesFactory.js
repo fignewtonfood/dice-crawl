@@ -53,7 +53,27 @@ diceCrawl.factory('TilesFactory', function TilesFactory($http){
         { "type":1 , "value":5 , "treasure":0 , "ability":"ATTACK" , "diceValues":[3,3,4,5,5] , "orientation":0 , "name":49 },
         { "type":3 , "value":5 , "treasure":1 , "ability":"" , "diceValues":[6,6,6,6,6] , "orientation":0 , "name":50 }
     ]
+    factory.getTiles=function(n){
+        return new Array(n);
+    };
 
+    function shuffle(tilesCollection){
+      for(var j, x, i = tilesCollection.length; i; j = Math.floor(Math.random() * i), x = tilesCollection[--i], tilesCollection[i] = tilesCollection[j], tilesCollection[j] = x);
+      tilesCollection.splice(12,0, factory.dragon);
+      return tilesCollection;
+    }
+    factory.boardTiles = shuffle(factory.tiles);
+
+    function addAttribs(boardTiles){
+      for (var thisTile in factory.boardTiles){
+      factory.boardTiles[thisTile]['balls'] = false;
+      factory.boardTiles[thisTile]['nutz'] = 2;
+    console.log(thisTile);
+
+      }
+    }
+    addAttribs(factory.boardTiles);
+      console.log(factory.boardTiles);
     return factory;
 });
 

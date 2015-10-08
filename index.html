@@ -14,6 +14,7 @@
     <script src="services/GamesFactory.js"></script>
     <script src="services/TilesFactory.js"></script>
     <script src="directives/myDirectives.js"></script>
+    <script src="directives/playerDirectives.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
         <div ui-view="players" class="players" ng-init="initPlayers()"></div>
         <div class="board" ng-controller="TilesCtrl">
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" player-test place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
               <img class="{{ ($index!==0 && $index!==4) ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>

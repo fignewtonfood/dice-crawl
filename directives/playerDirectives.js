@@ -1,4 +1,7 @@
-// diceCrawl.directive("playerRoll",function(){
-//
-// //add functionality when I get sorted how the players are even going to work.
-// });
+diceCrawl.directive ("playerTest", function(){
+  return {
+    link: function (scope,element){
+      console.log(scope)
+    }
+  }
+});
