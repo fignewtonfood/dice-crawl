@@ -10,7 +10,7 @@
      <img class="player__race" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
      <img class="player__class" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
     <br>
-      <img ng-repeat="die in player.roll track by $index" class="dice-rolled" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
+      <img ng-repeat="die in player.roll track by $index" class="dice-rolled" place-die die-image="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
       <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
       <button type="submit" ng-click="player.diceRoll()" class="btn">Roll Dice</button>
     </div>
