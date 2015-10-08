@@ -21,14 +21,11 @@
         <div ui-view="players" class="players" ng-init="initPlayers()"></div>
         <div class="board" ng-controller="TilesCtrl">
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
               <img class="{{ ($index!==0 && $index!==4) ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img class="hide playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-              <img class="hide playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-              <img class="hide playerdefault-red player-marker" src="img/players/RedPlayer.png">
-              <img class="hide playerdefault-yellow player-marker" src="img/players/YellowPlayer.png">
+              <img ng-repeat="player in players track by $index" class="{{ ((outerIndex===0 && $index===0) || (outerIndex===4 && $index===1)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
@@ -36,10 +33,7 @@
               <img class="backside" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img class="hide playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-              <img class="hide playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-              <img class="hide playerdefault-red player-marker" src="img/players/RedPlayer.png">
-              <img class="hide playerdefault-yellow player-marker" src="img/players/YellowPlayer.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
@@ -47,10 +41,7 @@
               <img class="{{ $index!==2 ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img class="hide playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-              <img class="hide playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-              <img class="hide playerdefault-red player-marker" src="img/players/RedPlayer.png">
-              <img class="hide playerdefault-yellow player-marker" src="img/players/YellowPlayer.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
@@ -58,21 +49,15 @@
               <img class="backside" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img class="hide playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-              <img class="hide playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-              <img class="hide playerdefault-red player-marker" src="img/players/RedPlayer.png">
-              <img class="hide playerdefault-yellow player-marker" src="img/players/YellowPlayer.png">
+              <img ng-repeat="player in players" class="hide playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}">
+            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 20 track by $index" place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
               <img class="{{ ($index!==0 && $index!==4) ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <!-- <img class="tile__image" place-player rotate-tile src="img/img{{ tile.name }}.jpg" alt="" /> -->
-              <img class="hide playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-              <img class="hide playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-              <img class="hide playerdefault-red player-marker" src="img/players/RedPlayer.png">
-              <img class="hide playerdefault-yellow player-marker" src="img/players/YellowPlayer.png">
+              <img ng-repeat="player in players" class="{{ ((outerIndex===0 && $index===2) || (outerIndex===4 && $index===3)) ? '':'hide' }} playerdefault-{{player.playerColor}} player-marker" src="img/players/{{player.playerColor}}Player.png">
             </div>
           </div>
         </div>

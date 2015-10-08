@@ -121,6 +121,10 @@ section {
     border: 1px solid #000;
 }
 
+.hide {
+    display: none; 
+}
+
 
 /* ===================================== board */
 
