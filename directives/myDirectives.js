@@ -142,19 +142,64 @@ diceCrawl.directive('bgImg', function(){
     };
 });
 
-// diceCrawl.directive('dice', function(){
-//   var templatehtml = "<div><p>sdf</p></div>";
-//     return {
-//       template = "<div></div>";
-//       link: function(scope, element, attrs){
-//         var divs = attrs.dice;
-//         // var templatehtml = "";
-//         for(var i = 0; i < divs; i++){
-//            template += "<div><p>sdf</p></div>";
-//         }
-//         console.log(divs);
-//       },
-//       template: templatehtml
-//     return {templatehtml}
+// diceCrawl.directive('treasure', function(){
+//   console.log({{tile}});
+//   return{
+//     // link: function(scope, element, attrs){
+//     //   if (parseInt(attrs.treasure) == 0){
+//     //     scope.template = "";
+//     //   }
+//     // },
+//       template:"<div ng-if='tile.treasure == 1' class='treasure'></div>"
 //
+//       // template:"<div ng-bind-html='treasure'></div>"
+//   }
 // });
+
+diceCrawl.directive("togglePlaceDie", function(placeDieButton) {
+    return {
+            link: function (scope, element) {
+                element.bind("click", function() {
+                  placeDieButton.shared ? placeDieButton.shared-=1 : placeDieButton.shared+=1;
+                    element.toggleClass("btn-warning");
+            });
+        }
+    };
+});
+
+diceCrawl.directive("dieImage", function(placeDieButton, grabDieImage) {
+    return {
+        link: function (scope, element, attrs) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+                    grabDieImage.dieimage = attrs.dieImage;
+                    console.log(grabDieImage.dieimage);
+                }
+            });
+        }
+    };
+});
+
+diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+                    element.remove();
+                }
+            });
+        }
+    };
+});
+
+diceCrawl.directive("dieTarget", function(placeDieButton, grabDieImage) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+                    element.append("<img class='dice-rolled' src='"+grabDieImage.dieimage+"'>");
+                }
+            });
+        }
+    };
+});

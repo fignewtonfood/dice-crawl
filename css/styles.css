@@ -229,6 +229,27 @@ position: absolute;
     box-shadow: 0 3px 6px rgba(0,0,0,.16);
 }
 
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-warning {
+  color: #000;
+  background-color: red;
+}
+
 /* feature ========================== rotate */
 
 .rotate1{
@@ -251,23 +272,6 @@ position: absolute;
   max-height: 25px;
   max-width: 25px;
 }
-
-
-/*.player1{
-    border-radius: 50%;
-}
-
-.player2{
-    border-radius: 50%;
-}
-
-.player3{
-    border-radius: 50%;
-    position: relative;
-    top: 5vh;
-    left: 5vh;
-    z-index: 5;
-}*/
 
 .player-marker{
     border-radius: 50%;
@@ -319,13 +323,6 @@ background-color:green;
     float: right;
 }
 
-/*.blue {
-    position: absolute;
-    z-index: 5;
-    top: 20;
-    left: 20;
-}*/
-
 .die {
     width:3.8vh;
     height:3.9vh;
@@ -341,4 +338,12 @@ background-color:green;
     display:flex;
     justify-content:center;
 
+}
+
+.treasure {
+  width:3.8vh;
+  height:3.9vh;
+  bottom:10px;
+  right:10px;
+  position:absolute;
 }
