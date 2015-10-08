@@ -16,8 +16,6 @@
                             <td>
                                 <div class="one inactive" die-target style="background-image:url('img/dice/blank{{player.abilities.playerRace.powerOne.diceOne}}.png'); width: 33px; height: 33px;"></div>
                                 <div class="two inactive" die-target style="background-image:url('img/dice/blank{{player.abilities.playerRace.powerOne.diceTwo}}.png'); width: 33px; height: 33px;"></div>
-                                <!-- <img style="border:solid 1px" class="inactive" die-target ng-src="img/dice/blank{{player.abilities.playerRace.powerOne.diceOne}}.png"/> -->
-                                <!-- <img style="border:solid 1px" class="inactive" die-target ng-src="img/dice/blank{{player.abilities.playerRace.powerOne.diceTwo}}.png"/> -->
                             </td>
                         </tr>
                         <tr>
@@ -85,7 +83,7 @@
             <tr>
                 <td>
                     <img ng-repeat="die in player.roll track by $index" class="dice-rolled" place-die die-image="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
-                    <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
+                    <button type="button" name="button" class="btn" toggle-place-player="{{player.playerColor}}">Place {{player.playerColor}} Player</button>
                     <button type="submit" ng-click="player.diceRoll()" class="btn">Roll Dice</button>
                 </td>
                 <td>
