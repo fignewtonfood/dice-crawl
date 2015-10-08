@@ -158,7 +158,7 @@ Player.prototype.setAbilities = function(){
 }
 
 Player.prototype.diceRoll = function() {
-  this.roll = GamesFactory.rollDice(); 
+  this.roll = GamesFactory.rollDice();
 }
 
  //Functions to place in the gameFactory at somePoint
@@ -167,14 +167,9 @@ Player.prototype.diceRoll = function() {
          var player = new Player();
          player.setPlayerColor();
          player.setAbilities();
-         player.diceRoll(); 
+         player.diceRoll();
          $scope.players.push(player);
 
-            //  console.log("Player: " + i + " is: ");
-            //  console.log("Player Color: " + player.playerColor);
-            //  console.log("Dice count: " + player.diceCount);
-            //  console.log("Player score: " + player.score);
-            //  console.log("Player race: " + player.abilities.playerRace.raceName);
      }//end for
    }//end init
 

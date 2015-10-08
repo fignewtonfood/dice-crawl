@@ -1,4 +1,5 @@
-var diceCrawl = angular.module('diceCrawl', ['ui.router']);
+var diceCrawl = angular.module('diceCrawl',
+    ['ui.router','ngDraggable']);
 
 diceCrawl.config(function($stateProvider, $urlRouterProvider){
     $stateProvider.state('home', {

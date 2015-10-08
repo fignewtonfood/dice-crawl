@@ -67,13 +67,13 @@ diceCrawl.factory('TilesFactory', function TilesFactory($http){
     function addAttribs(boardTiles){
       for (var thisTile in factory.boardTiles){
       factory.boardTiles[thisTile]['balls'] = false;
-      factory.boardTiles[thisTile]['nutz'] = 2;
-    console.log(thisTile);
+      factory.boardTiles[thisTile]['players'] = [];
+//    console.log(thisTile);
 
       }
     }
     addAttribs(factory.boardTiles);
-      console.log(factory.boardTiles);
+    //  console.log(factory.boardTiles);
     return factory;
 });
 

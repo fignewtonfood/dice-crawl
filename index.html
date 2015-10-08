@@ -7,6 +7,7 @@
     <script src="lib/angular.js"></script>
     <script src="lib/angular-ui-router.js"></script>
     <script src="lib/chance.js"></script>
+    <script src="lib/ngDraggable.js"></script>
     <script src="app.js"></script>
     <script src="controllers/TilesController.js"></script>
     <script src="controllers/GamesController.js"></script>
@@ -23,7 +24,9 @@
         <div ui-view="players" class="players" ng-init="initPlayers()"></div>
         <div class="board" ng-controller="TilesCtrl">
           <div class="row">
-            <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" player-test place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
+            <div class="tile" drop-to-me ng-repeat="tile in tiles | limitTo: 5: 0 track by $index" player-test place place-player rotate-tile bg-img="img/img{{ tile.name }}.jpg" dice="{{tile.diceValues.length}}" ng-init="outerIndex = $index">
+
+
               <img class="{{ ($index!==0 && $index!==4) ? 'backside':'backside-off' }}" reveal-tile src="img/img0.jpg">
               <div class="dice" ui-view="dice{{tile.diceValues.length}}"></div>
               <div ui-view="treasure{{tile.treasure}}"></div>

@@ -71,25 +71,23 @@ diceCrawl.directive("togglePlacePlayer", function(placePlayerButton) {
 
 diceCrawl.directive("placePlayer", function(placePlayerButton) {
     return {
-        link: function (scope, element, attrs) {
+        link: function (scope, element) {
             element.bind("click", function() {
                 if (placePlayerButton.shared) {
                     if (placePlayerButton.color == "blue"){
-                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-blue').toggleClass("hide");
+                        element.children().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "green"){
-                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-green').toggleClass("hide");
+                        element.children().next().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "red"){
-                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-red').toggleClass("hide");
+                        element.children().next().next().next().next().toggleClass("hide");
                     } else if (placePlayerButton.color == "yellow"){
-                        angular.element('.tile-'+attrs.placePlayer).closest('.playerdefault-yellow').toggleClass("hide");
+                        element.children().next().next().next().next().next().toggleClass("hide");
                     }
                 }
             });
         }
     };
 });
-
-
 
 // diceCrawl.directive("place", function() {
 //     return function(scope, element) {
@@ -117,8 +115,8 @@ diceCrawl.directive ("diceToRoll",function(){
           roll: "&"
     },
         template:'<button action="rollDice()">Roll The Dice</button>'
-    };
-});
+    }
+})
 
 diceCrawl.directive("debug",function($compile){
   return{
@@ -131,7 +129,7 @@ diceCrawl.directive("debug",function($compile){
       var clonedElement = $compile(clone)(scope);
       element.after(clonedElement);
     }
-};
+  }
 });
 
 diceCrawl.directive('bgImg', function(){
@@ -188,7 +186,6 @@ diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.remove();
-                    // console.log("place die" + scope.player.diceCount);
                 }
             });
         }
@@ -201,12 +198,50 @@ diceCrawl.directive("dieTarget", function(placeDieButton, grabDieImage) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.append("<img class='dice-rolled' src='"+grabDieImage.dieimage+"'>");
-                    scope.$apply(function() {
-                        scope.player.diceCount--;
-                        console.log(scope.player);
-                    });
                 }
             });
         }
     };
 });
+
+
+diceCrawl.directive("dropToMe",function(){
+
+  return{
+    restrict:  "E",
+     scope:{
+    balls: "twenty"
+  },
+    link: function(scope,element){
+      console.log(element);
+    }
+  }
+
+
+
+ //  $scope.onDropComplete1=function(data,evt){
+ //      var index = $scope.tiles.droppedObjects1.indexOf(data);
+ //      if (index == -1)
+ //      $scope.theObject.push(data);
+ //    }
+ //
+ //  $scope.findInColl = function(collection, item) {
+ //      var index = collection.indexOf(item);
+ //      return collection[i];
+ //
+ //    }
+ //
+ //    //something must trigger this event?
+ //    //will move the currente element from the array it is within and add it to an array elsewhere
+ //
+ // $scope.moveMe = function(item,fromColl,toColl){
+ //   fromColl.splice(index,range)
+ // }
+
+
+
+
+
+
+
+})
