@@ -158,3 +158,28 @@ diceCrawl.directive('bgImg', function(){
 //     return {templatehtml}
 //
 // });
+
+diceCrawl.directive("togglePlaceDie", function(placeDieButton) {
+    return {
+            link: function (scope, element) {
+                element.bind("click", function() {
+                  placeDieButton.shared ? placeDieButton.shared-=1 : placeDieButton.shared+=1;
+                    element.toggleClass("btn-warning");
+            });
+        }
+    };
+});
+
+diceCrawl.directive("placeDie", function(placeDieButton) {
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+
+                    element.remove();
+
+                }
+            });
+        }
+    };
+});

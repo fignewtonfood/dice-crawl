@@ -37,6 +37,11 @@ diceCrawl.factory("placePlayerButton", function() {
     return mySharedObject;
 });
 
+diceCrawl.factory("placeDieButton", function() {
+    var mySharedObject =  { shared: 0, dievalue: 0, diecolor: "" };
+    return mySharedObject;
+});
+
 //
 // notes:
 //
