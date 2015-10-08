@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- <div ui-view>
-
-  </div> -->
   <div class="window">
     <div class="players" ng-controller="PlayersCtrl" ng-init="initPlayers()">
         <div class="player {{player.playerColor}}" ng-repeat="player in players">
@@ -42,10 +39,6 @@
         <div class="tile" ng-repeat="tile in tiles | limitTo: 5: 0" place >
           <img class="tile__image" rotate-tile src="img/img{{ tile.name }}.jpg" alt="" />
           <img class="backside" reveal-tile src="img/img0.jpg">
-          <!-- <img class="playerdefault-blue player-marker" src="img/players/BluePlayer.png">
-          <img class="playerdefault-green player-marker" src="img/players/GreenPlayer.png">
-          <img class="playerdefault-red player-marker" src="img/players/RedPlayer.png">
-          <img class="playerdefault-yellow player-marker" src="img/players/YellowPlayer.png"> -->
         </div>
       </div>
       <div class="row">

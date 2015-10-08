@@ -119,7 +119,7 @@ function Player(playerColor, diceCount, rollCount, score, abilities){
   this.roll = [];
   this.abilities = {playerRace:{},playerClass:{}};
 }
-
+//
 function randomSelectDelete(selectedArray) {
   var randomNumber = Math.floor((Math.random() * selectedArray.length));
   var selectedItem = selectedArray[randomNumber];
@@ -135,19 +135,6 @@ function randomSelectDelete(selectedArray) {
 //each die is rolled (die.roll())
     //which will return a random number from 1 to 6
 
-
-// Player.pullDiceToRoll(){
-//   if (this.diceCount < this.rollCount) {
-//     this.rollCount = this.diceCount;
-//   } else {
-//     this.diceCount -= this.rollCount;
-//   }
-//   while (var i <= rollCount ){//five will
-//     roll(rollCount);
-//     i += 1;
-//   }
-// }
-
 Player.prototype.setPlayerColor = function() {
   this.playerColor = randomSelectDelete(colors);
 }
@@ -158,7 +145,7 @@ Player.prototype.setAbilities = function(){
 }
 
 Player.prototype.diceRoll = function() {
-  this.roll = GamesFactory.rollDice(); 
+  this.roll = GamesFactory.rollDice();
 }
 
  //Functions to place in the gameFactory at somePoint
@@ -167,16 +154,8 @@ Player.prototype.diceRoll = function() {
          var player = new Player();
          player.setPlayerColor();
          player.setAbilities();
-         player.diceRoll(); 
+         player.diceRoll();
          $scope.players.push(player);
-
-            //  console.log("Player: " + i + " is: ");
-            //  console.log("Player Color: " + player.playerColor);
-            //  console.log("Dice count: " + player.diceCount);
-            //  console.log("Player score: " + player.score);
-            //  console.log("Player race: " + player.abilities.playerRace.raceName);
      }//end for
    }//end init
-
-
 })

@@ -11,14 +11,6 @@
     font-family: 'Cinzel', serif;
 }
 
-/*#playerStyling ul {
-    display: inline-block;
-}*/
-
-#playerStyling hr {
-
-}
-
 /* Flaired edges, by Tomas Theunissen */
 
 #playerStyling hr {
@@ -31,7 +23,6 @@
 }
 
 .inactive {
-
   -webkit-filter: opacity(75%);
   filter: opacity(75%);
 }
@@ -97,12 +88,7 @@ div {
   border-style:solid;
 }
 
-
 /* splash page ============================= */
-
-section {
-
-}
 
 .splash {
     width: 90%;
@@ -139,7 +125,6 @@ section {
 
 /* ==================================== layout */
 
-
 .window {
  display:flex;
  flex-grow:10;
@@ -159,7 +144,6 @@ section {
 
 .player__race, .player__class{
     width: 10vw;
-
 }
 
 .dice-rolled {
@@ -170,7 +154,6 @@ section {
 .hide {
     display: none;
 }
-
 
 /* ===================================== board */
 
@@ -214,7 +197,6 @@ position: absolute;
 
 .game {
   flex-grow:2
-
 }
 
 /* ==================================== button */
@@ -231,7 +213,6 @@ position: absolute;
     margin: 1em auto;
     text-decoration: none;
     transition: 1s;
-
 }
 
 .main__callToAction:hover {
@@ -297,14 +278,15 @@ position: absolute;
     display: none;
 }
 
-
 .red{
     background-color: rgb(113, 15, 15);
     color:white;
 }
+
 .yellow{
 background-color:rgb(241, 241, 0);
 }
+
 .blue{
 background-color:rgb(41, 41, 76);
 color:white;
@@ -322,14 +304,12 @@ color: black;
 background-color:green;
 }
 
-
 .backside{
     position: absolute;
       width:20vh;
       height:20vh;
     z-index: 10;
 }
-
 
 .player-btn{
     float: right;
@@ -343,13 +323,11 @@ background-color:green;
 .not {
     width:1%;
     height:3px;
-
 }
 
 .dice {
     display:flex;
     justify-content:center;
-
 }
 
 .treasure {

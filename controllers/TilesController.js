@@ -7,13 +7,6 @@ diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory, Games
         return new Array(n);
     };
 
-    // $scope.shuffle = function(o){
-    //     console.log("YOU GOT TILES");
-    //   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    //   o.splice(12,0, TilesFactory.dragon);
-    //   return o;
-    // }
-
     $scope.randomSelectDelete=function(selectedArray) {
       var randomNumber = Math.floor((Math.random() * selectedArray.length));
       var selectedItem = selectedArray[randomNumber];
@@ -31,10 +24,6 @@ diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory, Games
         }//end for
             $scope.tiles.splice(12,0, TilesFactory.dragon);
       }//end init
-
-    // $scope.tiles = $scope.shuffle(TilesFactory.tiles);
-    //$scope.tiles = TilesFactory.tiles;
-
 
     $scope.dragon = TilesFactory.dragon;
 

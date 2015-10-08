@@ -89,27 +89,6 @@ diceCrawl.directive("placePlayer", function(placePlayerButton) {
     };
 });
 
-
-
-// diceCrawl.directive("place", function() {
-//     return function(scope, element) {
-//         element.bind("click", function() {
-//             element.append('<img src="img/players/BluePlayer.png" class="blue"/>');
-//         });
-//     };
-// });
-
-//while this bit technically worked...it didnt work the way it ought to - MC
-// diceCrawl.directive("rollDice", function(){
-//     return function (scope, element, attrs){
-//         // element.bind("click", function() {
-//         //     var myRoll = chance.d6();
-//         //
-//         //      console.log("dice got rolled...not really but the roll is: " + myRoll + " and my playerColor is: " +  player);
-//         // });
-//     }
-// });
-
 diceCrawl.directive ("diceToRoll",function(){
     return{
         restrict: "E",
@@ -144,20 +123,6 @@ diceCrawl.directive('bgImg', function(){
     };
 });
 
-// diceCrawl.directive('treasure', function(){
-//   console.log({{tile}});
-//   return{
-//     // link: function(scope, element, attrs){
-//     //   if (parseInt(attrs.treasure) == 0){
-//     //     scope.template = "";
-//     //   }
-//     // },
-//       template:"<div ng-if='tile.treasure == 1' class='treasure'></div>"
-//
-//       // template:"<div ng-bind-html='treasure'></div>"
-//   }
-// });
-
 diceCrawl.directive("togglePlaceDie", function(placeDieButton) {
     return {
             link: function (scope, element) {
@@ -188,7 +153,6 @@ diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
                     element.remove();
-                    // console.log("place die" + scope.player.diceCount);
                 }
             });
         }
@@ -203,7 +167,6 @@ diceCrawl.directive("dieTarget", function(placeDieButton, grabDieImage) {
                     element.append("<img class='dice-rolled' src='"+grabDieImage.dieimage+"'>");
                     scope.$apply(function() {
                         scope.player.diceCount--;
-                        console.log(scope.player);
                     });
                 }
             });
