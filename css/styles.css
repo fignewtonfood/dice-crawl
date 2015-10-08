@@ -1,3 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+
+#playerStyling th {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#playerStyling td {
+    font-family: 'Cinzel', serif;
+}
+
+/*#playerStyling ul {
+    display: inline-block;
+}*/
+
+#playerStyling hr {
+
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+#playerStyling hr {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    display: block;
+    width: 100%
+}
+
+.inactive {
+
+  -webkit-filter: opacity(75%);
+  filter: opacity(75%);
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -211,10 +249,6 @@ position: absolute;
   border-radius: 4px;
 }
 
-/*.btn:focus {
-    background: red;
-}*/
-
 .btn-warning {
   color: #000;
   background-color: red;
@@ -242,23 +276,6 @@ position: absolute;
   max-height: 25px;
   max-width: 25px;
 }
-
-
-/*.player1{
-    border-radius: 50%;
-}
-
-.player2{
-    border-radius: 50%;
-}
-
-.player3{
-    border-radius: 50%;
-    position: relative;
-    top: 5vh;
-    left: 5vh;
-    z-index: 5;
-}*/
 
 .player-marker{
     border-radius: 50%;
@@ -310,13 +327,6 @@ background-color:green;
     float: right;
 }
 
-/*.blue {
-    position: absolute;
-    z-index: 5;
-    top: 20;
-    left: 20;
-}*/
-
 .die {
     width:3.8vh;
     height:3.9vh;
@@ -332,4 +342,12 @@ background-color:green;
     display:flex;
     justify-content:center;
 
+}
+
+.treasure {
+  width:3.8vh;
+  height:3.9vh;
+  bottom:10px;
+  right:10px;
+  position:absolute;
 }

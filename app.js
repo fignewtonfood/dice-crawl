@@ -36,6 +36,10 @@ diceCrawl.config(function($stateProvider, $urlRouterProvider){
             'dice5':{
                 templateUrl: 'partials/dice5.html',
                 controller: "TilesCtrl"
+            },
+            'treasure1':{
+                templateUrl: 'partials/treasure.html',
+                controller: "TilesCtrl"
             }
         }
     });

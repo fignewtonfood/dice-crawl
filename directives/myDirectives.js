@@ -63,44 +63,31 @@ diceCrawl.directive("togglePlacePlayer", function(placePlayerButton) {
                 element.bind("click", function() {
                     placePlayerButton.shared ? placePlayerButton.shared-=1 : placePlayerButton.shared+=1;
                     placePlayerButton.color = attrs.togglePlacePlayer;
-                    element.toggleClass("btn-warning");
+                    element.toggleClass("btn-info");
             });
         }
     };
 });
 
-// diceCrawl.directive("placePlayer", function(placePlayerButton) {
-//     return {
-//         link: function (scope, element) {
-//             element.bind("click", function() {
-//                 if (placePlayerButton.shared) {
-//                     if (placePlayerButton.color == "blue"){
-//                         element.children().next().next().toggleClass("hide");
-//                     } else if (placePlayerButton.color == "green"){
-//                         element.children().next().next().next().toggleClass("hide");
-//                     } else if (placePlayerButton.color == "red"){
-//                         element.children().next().next().next().next().toggleClass("hide");
-//                     } else if (placePlayerButton.color == "yellow"){
-//                         element.children().next().next().next().next().next().toggleClass("hide");
-//                     }
-//                 }
-//             });
-//         }
-//     };
-// });
-
 diceCrawl.directive("placePlayer", function(placePlayerButton) {
-    return function(scope, element) {
-        element.bind("click", function() {
-            var body = $document.find("body");
-            body.toggleClass();
-        });
+    return {
+        link: function (scope, element) {
+            element.bind("click", function() {
+                if (placePlayerButton.shared) {
+                    if (placePlayerButton.color == "blue"){
+                        element.children().next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "green"){
+                        element.children().next().next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "red"){
+                        element.children().next().next().next().next().toggleClass("hide");
+                    } else if (placePlayerButton.color == "yellow"){
+                        element.children().next().next().next().next().next().toggleClass("hide");
+                    }
+                }
+            });
+        }
     };
 });
-
-
-
-
 
 // diceCrawl.directive("place", function() {
 //     return function(scope, element) {
@@ -128,8 +115,8 @@ diceCrawl.directive ("diceToRoll",function(){
           roll: "&"
     },
         template:'<button action="rollDice()">Roll The Dice</button>'
-    };
-});
+    }
+})
 
 diceCrawl.directive("debug",function($compile){
   return{
@@ -142,7 +129,7 @@ diceCrawl.directive("debug",function($compile){
       var clonedElement = $compile(clone)(scope);
       element.after(clonedElement);
     }
-};
+  }
 });
 
 diceCrawl.directive('bgImg', function(){
@@ -155,21 +142,18 @@ diceCrawl.directive('bgImg', function(){
     };
 });
 
-// diceCrawl.directive('dice', function(){
-//   var templatehtml = "<div><p>sdf</p></div>";
-//     return {
-//       template = "<div></div>";
-//       link: function(scope, element, attrs){
-//         var divs = attrs.dice;
-//         // var templatehtml = "";
-//         for(var i = 0; i < divs; i++){
-//            template += "<div><p>sdf</p></div>";
-//         }
-//         console.log(divs);
-//       },
-//       template: templatehtml
-//     return {templatehtml}
+// diceCrawl.directive('treasure', function(){
+//   console.log({{tile}});
+//   return{
+//     // link: function(scope, element, attrs){
+//     //   if (parseInt(attrs.treasure) == 0){
+//     //     scope.template = "";
+//     //   }
+//     // },
+//       template:"<div ng-if='tile.treasure == 1' class='treasure'></div>"
 //
+//       // template:"<div ng-bind-html='treasure'></div>"
+//   }
 // });
 
 diceCrawl.directive("togglePlaceDie", function(placeDieButton) {
