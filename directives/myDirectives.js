@@ -170,14 +170,37 @@ diceCrawl.directive("togglePlaceDie", function(placeDieButton) {
     };
 });
 
-diceCrawl.directive("placeDie", function(placeDieButton) {
+diceCrawl.directive("dieImage", function(placeDieButton, grabDieImage) {
+    return {
+        link: function (scope, element, attrs) {
+            element.bind("click", function() {
+                if (placeDieButton.shared) {
+                    grabDieImage.dieimage = attrs.dieImage;
+                    console.log(grabDieImage.dieimage);
+                }
+            });
+        }
+    };
+});
+
+// diceCrawl.directive("dieValue", function(placeDieButton, grabDieValue) {
+//     return {
+//         link: function (scope, element, attrs) {
+//             element.bind("click", function() {
+//                 if (placeDieButton.shared) {
+//                     grabDieValue.dievalue += attrs.dieValue;
+//                 }
+//             });
+//         }
+//     };
+// });
+
+diceCrawl.directive("placeDie", function(placeDieButton, grabDieImage) {
     return {
         link: function (scope, element) {
             element.bind("click", function() {
                 if (placeDieButton.shared) {
-
                     element.remove();
-
                 }
             });
         }

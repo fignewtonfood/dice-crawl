@@ -38,8 +38,13 @@ diceCrawl.factory("placePlayerButton", function() {
 });
 
 diceCrawl.factory("placeDieButton", function() {
-    var mySharedObject =  { shared: 0, dievalue: 0, diecolor: "" };
+    var mySharedObject =  { shared: 0 };
     return mySharedObject;
+});
+
+diceCrawl.factory("grabDieImage", function() {
+    var dieValue =  { dieimage: "" };
+    return dieValue;
 });
 
 //
