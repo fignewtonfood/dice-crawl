@@ -6,12 +6,100 @@
 </div> -->
 
 <div  ng-init="initPlayers()">
-    <div class="player {{player.playerColor}}" ng-repeat="player in players">
-     <img class="player__race" ng-src="img/races/{{player.abilities.playerRace.raceName}}.jpg" alt="" />
-     <img class="player__class" ng-src="img/classes/{{player.abilities.playerClass.className}}.jpg" alt="" />
-    <br>
-      <img ng-repeat="die in player.roll track by $index" class="dice-rolled" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
-      <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
-      <button type="submit" ng-click="player.diceRoll()" class="btn">Roll Dice</button>
+    <div id="playerStyling" class="player {{player.playerColor}}" ng-repeat="player in players">
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <th colspan="2">
+                                {{player.abilities.playerRace.raceName}}
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{player.abilities.playerRace.powerOne.powerName}}
+                            </td>
+                            <td>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerOne.diceOne}}.png"/>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerOne.diceTwo}}.png"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{player.abilities.playerRace.powerTwo.powerName}}
+                            </td>
+                            <td>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerTwo.diceThree}}.png"/>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerTwo.diceFour}}.png"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {{player.abilities.playerRace.powerThree.powerName}}
+                            </td>
+                            <td>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerThree.diceFive}}.png"/>
+                                <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerRace.powerThree.diceSix}}.png"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                 <table>
+                     <tr>
+                         <th colspan="2">
+                             {{player.abilities.playerClass.className}}
+                         </th>
+                     </tr>
+                     <tr>
+                         <td>
+                             {{player.abilities.playerClass.powerOne.powerName}}
+                         </td>
+                         <td>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerOne.diceOne}}.png"/>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerOne.diceTwo}}.png"/>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             {{player.abilities.playerClass.powerTwo.powerName}}
+                         </td>
+                         <td>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerTwo.diceThree}}.png"/>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerTwo.diceFour}}.png"/>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             {{player.abilities.playerClass.powerThree.powerName}}
+                         </td>
+                         <td>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerThree.diceFive}}.png"/>
+                             <img style="border:solid 1px" class="inactive die-target" src="img/dice/blank{{player.abilities.playerClass.powerThree.diceSix}}.png"/>
+                         </td>
+                     </tr>
+                 </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img ng-repeat="die in player.roll track by $index" class="dice-rolled" ng-src="img/dice/{{player.playerColor}}{{player.roll[$index]}}.png" alt=""/><br />
+                    <button type="button" name="button" class="btn" toggle-place-player="{{ player.playerColor }}">Place {{player.playerColor}} Player</button>
+                    <button type="submit" ng-click="player.diceRoll()" class="btn">Roll Dice</button>
+                </td>
+                <td>
+                    <ul class="player__totaldie">
+                        <lh>Die count</lh>
+                        <li>{{player.diceCount}}</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
