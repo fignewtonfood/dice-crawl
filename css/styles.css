@@ -1,3 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+
+#playerStyling th {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#playerStyling td {
+    font-family: 'Cinzel', serif;
+}
+
+/*#playerStyling ul {
+    display: inline-block;
+}*/
+
+#playerStyling hr {
+
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+#playerStyling hr {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    display: block;
+    width: 100%
+}
+
+.inactive {
+
+  -webkit-filter: opacity(75%);
+  filter: opacity(75%);
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
