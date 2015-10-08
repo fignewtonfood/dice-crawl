@@ -304,3 +304,11 @@ background-color:green;
     justify-content:center;
 
 }
+
+.treasure {
+  width:3.8vh;
+  height:3.9vh;
+  bottom:10px;
+  right:10px;
+  position:absolute;
+}
