@@ -155,21 +155,18 @@ diceCrawl.directive('bgImg', function(){
     };
 });
 
-// diceCrawl.directive('dice', function(){
-//   var templatehtml = "<div><p>sdf</p></div>";
-//     return {
-//       template = "<div></div>";
-//       link: function(scope, element, attrs){
-//         var divs = attrs.dice;
-//         // var templatehtml = "";
-//         for(var i = 0; i < divs; i++){
-//            template += "<div><p>sdf</p></div>";
-//         }
-//         console.log(divs);
-//       },
-//       template: templatehtml
-//     return {templatehtml}
+// diceCrawl.directive('treasure', function(){
+//   console.log({{tile}});
+//   return{
+//     // link: function(scope, element, attrs){
+//     //   if (parseInt(attrs.treasure) == 0){
+//     //     scope.template = "";
+//     //   }
+//     // },
+//       template:"<div ng-if='tile.treasure == 1' class='treasure'></div>"
 //
+//       // template:"<div ng-bind-html='treasure'></div>"
+//   }
 // });
 
 diceCrawl.directive("togglePlaceDie", function(placeDieButton) {

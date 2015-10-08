@@ -12,5 +12,6 @@ diceCrawl.controller('TilesCtrl', function TilesCtrl($scope, TilesFactory){
 
     $scope.dragon = TilesFactory.dragon;
 
+    $scope.treasure = "<div class='treasure'></div>";
 
 });
