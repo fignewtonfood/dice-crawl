@@ -3,8 +3,6 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
     factory.maxPlayers = 4;
     factory.players = [];
     factory.roll = [];
-    // console.log('GamesFactory is loaded');
-
 
     factory.newGame = function() {
         factory.games.push({ players: [], board: [] });
@@ -18,7 +16,6 @@ diceCrawl.factory('GamesFactory', function GamesFactory(){
         }
         return factory.roll;
     }
-
    return factory;
 });
 
