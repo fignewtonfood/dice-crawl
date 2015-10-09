@@ -1,6 +1,6 @@
 # _Dice Crawl_
 ## _Users can play a game of dice crawl: search the dungeon, get treasure, defeat the dragon, 9/26/2015_
-### By Tim White, Mike Chastain, Charles Moss
+### By Tim White, Mike Chastain, Charles Moss, Samantha Maturen, Michael Rapp, Rick Hills
 ## Description
 _Users will see a randomly created dungeon and be randomly assigned a race and class. Using their bank of dice, they will be able to defeat monsters, unlock powers, and gain treasures._
 
